@@ -13,6 +13,10 @@ defmodule BecariosBunsan2022B1 do
 
   """
   def hello do
-    :world
+    "ALO POLICIA"
+  end
+
+  def hola do
+    "ALO POLICIA2"
   end
 end
