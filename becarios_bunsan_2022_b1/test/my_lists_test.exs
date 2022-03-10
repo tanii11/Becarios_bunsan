@@ -18,8 +18,4 @@ defmodule MyListsTest do
         assert MyLists.zip_with([1, 2, 5, 6], [3, 4], fn x, y -> x + y end) == [4, 6]
     end
   end
-  #Enum.reduce([1, 2, 3], 0, fn x, acc -> x + acc end)
   
-#Nume.each(["some", "example"], fn x -> IO.puts(x) end)
-#Nume.zip([1, 2, 3], [:a, :b, :c])
-#Nume.zip_with([1, 2, 5, 6], [3, 4], fn x, y -> x + y end)
