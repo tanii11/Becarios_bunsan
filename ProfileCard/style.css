@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  background-image: url("./assets/fondo.jpg");
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin: 32px 0;
+  text-align: center;
+}
+
+#card {
+  background-color: #fff1c7;
+  width: 35%;
+  min-width: 350px;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 2px 4px 24px #e7a427;
+  overflow: hidden;
+}
+
+#card > img {
+  width: 100%;
+  /*border-radius: 10px 10px 0 0;*/
+}
+.mbe{
+  margin-top: 20px;
+}
+#card > .mbe > .imgProfile{
+  width: 150px;
+  height: 190px;
+  border-radius: 100%;
+  border: 5px solid #fbb03c;
+  display: block;
+  margin: auto;
+  box-shadow: 2px 4px 24px #fbb03c;
+
+}
+
+#container {
+  text-align: center;
+  padding: 32px;
+}
+
+.description {
+  font-size: 16px;
+  color: #b95700;
+}
+
+.mb {
+  margin-bottom: 24px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbb03c;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+.details > .logos{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;  
+}
+
+.link {
+  text-decoration: none;
+  font-size: 12px;
+  color: #4f4f4f;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #3829e0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #3829e0;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px #e0e8ff;
+  margin-bottom: 24px;
+}
