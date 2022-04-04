@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="#">
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>FORMULARIO</h1>
+        <form action="register.php" method="POST">
+          <p><input type="text" name="name" id="name" placeholder="Name"></p>
+          <p><textarea name="desciption" id="desciption" cols="30" rows="10" placeholder="Description"></textarea></p>
+          <p><input type="date" name="startDate" id="startDate" placeholder="Start Date"></p>
+          <p><input type="date" name="endDate" id="endDate" placeholder="End Date"></p>
+          <p><select name="country" id="country">
+            <option value="pizza">pizza</option>
+            <option value="taco">taco</option>
+            <option value="hamburguesa">hamburguesa</option>
+            <option value="ramen">ramen</option>
+            <option value="chilakiles">chilakiles</option>
+          </select></p>
+          <p><input type="submit" value="ENVIAR">
+
+        </form>
+      </section>
+
+    </main>
+  </body>
+</html>
