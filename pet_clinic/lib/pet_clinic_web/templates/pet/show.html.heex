@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;900&display=swap"
+      rel="stylesheet"/>    
+
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/style.css")}/>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1 id="title">Pet: <%= @pet.name %> </h1>
+      </header>
+      <main>
+        <div id="card">
+          <div class="mbe">
+            <img
+            class="imgProfile mb" src={Routes.static_path(@conn, "/images/pet.png")}
+            alt="pet" >
+          </div>
+          <div id="container">
+            <h2>Name:<%= @pet.name %></h2>
+            <h2>Age:  <%= @pet.age %></h2>
+            <div class="details mb">               
+              <div>
+                <strong> Type</strong>
+                <p><%= @pet.type %></p>
+              </div>
+            </div>
+            <strong> Sex </strong>
+            <p class="description mb">
+              <%= @pet.sex %>
+            </p>
+            <div class="details mb">               
+              <div>
+                <span><%= link "Edit", to: Routes.pet_path(@conn, :edit, @pet) %></span> |
+                <span><%= link "Back", to: Routes.pet_path(@conn, :index) %></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <br>
+    </section>
+  </body>
+</html>

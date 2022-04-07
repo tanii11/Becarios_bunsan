@@ -1,0 +1,212 @@
+instrucciones: realizar cada uno de los siguientes puntos en el orden definido, utilizando los comandos vistos durante las 11 sesiones del curso
+
+1) verificar estar posicionado dentro del home directory, sino lo estas cambiarte al home directory
+cd p pwd
+
+2) crear un directorio dentro del home directory llamado: challenge
+tania@tania-HP:~$ mkdir challenge
+ls -l
+total 48
+drwxrwxr-x 7 tania tania 4096 abr  6 16:32 Becarios_bunsan
+drwxrwxr-x 2 tania tania 4096 abr  6 19:42 challenge
+drwxr-xr-x 2 tania tania 4096 abr  6 19:34 Descargas
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Documentos
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Escritorio
+drwxrwxr-x 9 tania tania 4096 abr  6 14:45 hola
+drwxr-xr-x 2 tania tania 4096 abr  6 14:53 Imágenes
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Música
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Plantillas
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Público
+drwx------ 5 tania tania 4096 abr  6 17:14 snap
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Vídeos
+
+
+3) crear un directorio dentro del folder /var llamado: challenge
+tania@tania-HP:~$ sudo mkdir /var/challenge
+[sudo] contraseña para tania:
+ls -l  /var
+total 52
+drwxr-xr-x  2 root root     4096 abr  6 13:56 backups
+drwxr-xr-x 18 root root     4096 abr  6 18:31 cache
+drwxr-xr-x  2 root root     4096 abr  6 19:45 challenge
+drwxrwsrwt  2 root whoopsie 4096 feb 23 02:50 crash
+drwxr-xr-x 69 root root     4096 abr  6 14:40 lib
+drwxrwsr-x  2 root staff    4096 abr 15  2020 local
+lrwxrwxrwx  1 root root        9 abr  6 11:55 lock -> /run/lock
+drwxrwxr-x 15 root syslog   4096 abr  6 14:40 log
+drwxrwsr-x  2 root mail     4096 feb 23 02:47 mail
+drwxrwsrwt  2 root whoopsie 4096 feb 23 02:50 metrics
+drwxr-xr-x  2 root root     4096 feb 23 02:47 opt
+lrwxrwxrwx  1 root root        4 abr  6 11:55 run -> /run
+drwxr-xr-x 13 root root     4096 abr  6 16:01 snap
+drwxr-xr-x  7 root root     4096 feb 23 02:49 spool
+drwxrwxrwt 10 root root     4096 abr  6 20:15 tmp
+
+
+4) instalar el programa htop usando apt
+tania@tania-HP:~$ sudo apt-get install htop
+[sudo] contraseña para tania: 
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Los paquetes indicados a continuación se instalaron de forma automática y ya no son necesarios.
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi
+  libgstreamer-plugins-bad1.0-0 libva-wayland2
+Utilice «sudo apt autoremove» para eliminarlos.
+Se instalarán los siguientes paquetes NUEVOS:
+  htop
+0 actualizados, 1 nuevos se instalarán, 0 para eliminar y 98 no actualizados.
+Se necesita descargar 80.5 kB de archivos.
+Se utilizarán 225 kB de espacio de disco adicional después de esta operación.
+Des:1 http://mx.archive.ubuntu.com/ubuntu focal/main amd64 htop amd64 2.2.0-2build1 [80.5 kB]
+Descargados 80.5 kB en 1s (93.8 kB/s)
+Seleccionando el paquete htop previamente no seleccionado.
+(Leyendo la base de datos ... 195415 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../htop_2.2.0-2build1_amd64.deb ...
+Desempaquetando htop (2.2.0-2build1) ...
+Configurando htop (2.2.0-2build1) ...
+Procesando disparadores para desktop-file-utils (0.24-1ubuntu3) ...
+Procesando disparadores para mime-support (3.64ubuntu1) ...
+Procesando disparadores para gnome-menus (3.36.0-1ubuntu1) ...
+Procesando disparadores para man-db (2.9.1-1) ...
+
+
+5) leer la documentación del programa htop
+6) ejecutar el programa htop con el comando: htop
+muestra como una tabla que funciona para monitorizar el sistema en tiempo real 
+6) salir del programa htop con la letra: q
+7) crear un directorio dentro del home directory llamado: mexico
+mkdir mexico
+ls -l
+total 52
+drwxrwxr-x 7 tania tania 4096 abr  6 16:32 Becarios_bunsan
+drwxrwxr-x 2 tania tania 4096 abr  6 19:42 challenge
+drwxr-xr-x 2 tania tania 4096 abr  6 19:34 Descargas
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Documentos
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Escritorio
+drwxrwxr-x 9 tania tania 4096 abr  6 14:45 hola
+drwxr-xr-x 2 tania tania 4096 abr  6 14:53 Imágenes
+drwxrwxr-x 2 tania tania 4096 abr  6 20:41 mexico
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Música
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Plantillas
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Público
+drwx------ 5 tania tania 4096 abr  6 17:14 snap
+drwxr-xr-x 2 tania tania 4096 abr  6 13:53 Vídeos
+
+
+8) posicionarse dentre del directorio mexico y descargar y descomprimir el siguiente archivo: https://cartografia.ife.org.mx/tmp/zips/CCol-01.zip
+tania@tania-HP:~$ cd mexico/
+tania@tania-HP:~/mexico$ wget https://cartografia.ife.org.mx/tmp/zips/CCol-01.zip
+--2022-04-06 20:42:54--  https://cartografia.ife.org.mx/tmp/zips/CCol-01.zip
+Resolviendo cartografia.ife.org.mx (cartografia.ife.org.mx)... 200.34.164.122
+Conectando con cartografia.ife.org.mx (cartografia.ife.org.mx)[200.34.164.122]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 138748 (135K) [application/zip]
+Guardando como: “CCol-01.zip”
+
+CCol-01.zip       100%[==========>] 135.50K  --.-KB/s    en 0.09s   
+
+2022-04-06 20:42:55 (1.40 MB/s) - “CCol-01.zip” guardado [138748/138748]
+
+tania@tania-HP:~/mexico$ unzip CCol-01.zip 
+Archive:  CCol-01.zip
+  inflating: Catalogo de Colonias.mdb  
+  inflating: Catalogo de Colonias.xls 
+
+9) listar el contenido el directorio mexico para verificar el tamaño de los archivos descomprimidos
+tania@tania-HP:~/mexico$ ls -l 
+total 900
+-rw-rw-rw- 1 tania tania 364544 feb 22 11:44 'Catalogo de Colonias.mdb'
+-rw-rw-rw- 1 tania tania 416256 feb 22 11:44 'Catalogo de Colonias.xls'
+-rw-rw-r-- 1 tania tania 138748 feb 22 14:58  CCol-01.zip
+
+10) volver a listar el contenido del directorio mexico pero ahora redirigir el resultado a un archivo llamado mexico.txt
+tania@tania-HP:~/mexico$ ls -l > mexico.txt
+
+
+11) imprimir en pantalla el contenido del archivo mexico.txt
+tania@tania-HP:~/mexico$ cat mexico.txt 
+total 900
+-rw-rw-rw- 1 tania tania 364544 feb 22 11:44 Catalogo de Colonias.mdb
+-rw-rw-rw- 1 tania tania 416256 feb 22 11:44 Catalogo de Colonias.xls
+-rw-rw-r-- 1 tania tania 138748 feb 22 14:58 CCol-01.zip
+-rw-rw-r-- 1 tania tania      0 abr  6 20:48 mexico.txt
+
+
+12) contar las lineas del archivo mexico.txt
+tania@tania-HP:~/mexico$ wc mexico.txt 
+  5  42 263 mexico.txt
+
+13) actualizar el timestamp del archivo mexico.txt
+tania@tania-HP:~/mexico$ ls -l mexico.txt
+-rw-rw-r-- 1 tania tania 263 abr  6 20:52 mexico.txt
+tania@tania-HP:~/mexico$ touch mexico.txt 
+tania@tania-HP:~/mexico$ ls -l mexico.txt
+-rw-rw-r-- 1 tania tania 263 abr  6 20:54 mexico.txt
+
+14) eliminar los permisos de escritura a nivel de usuario y a nivel del grupo del usuario al archivo: mexico.txt
+tania@tania-HP:~/mexico$ ls -l mexico.txt
+-rw-rw-r-- 1 tania tania 263 abr  6 20:54 mexico.txt
+tania@tania-HP:~/mexico$ chmod ug-w mexico.txt 
+tania@tania-HP:~/mexico$ ls -l mexico.txt
+-r--r--r-- 1 tania tania 263 abr  6 20:54 mexico.txt
+
+15) crear un symlink llamada: mimexico.txt al archivo mexico.txt
+tania@tania-HP:~/mexico$ ln mexico.txt mimexico.txt
+tania@tania-HP:~/mexico$ cat mimexico.txt 
+total 900
+-rw-rw-rw- 1 tania tania 364544 feb 22 11:44 Catalogo de Colonias.mdb
+-rw-rw-rw- 1 tania tania 416256 feb 22 11:44 Catalogo de Colonias.xls
+-rw-rw-r-- 1 tania tania 138748 feb 22 14:58 CCol-01.zip
+-rw-rw-r-- 1 tania tania      0 abr  6 20:52 mexico.txt
+
+
+16) copiar el archivo mexico.txt al folder /var/challenge
+tania@tania-HP:~/mexico$ sudo cp mexico.txt /var/challenge/
+[sudo] contraseña para tania: 
+tania@tania-HP:~/mexico$ cd /var/challenge/
+tania@tania-HP:/var/challenge$ ls -l
+total 4
+-r--r--r-- 1 root root 263 abr  6 21:13 mexico.txt
+
+17) borrar el archivo /var/challenge/mexico.txt
+tania@tania-HP:/var/challenge$ sudo rm mexico.txt 
+tania@tania-HP:/var/challenge$ ls -l
+total 0
+
+18) buscar la palabra: Mexico dentro del archivo: /usr/share/dict/words
+tania@tania-HP:/var/challenge$ grep Mexico /usr/share/dict/words
+Mexico
+Mexico's
+
+19) buscar dentro del home directory todos los archivos con la extensión: .txt
+tania@tania-HP:~$ sudo find / -type f -name *.txt
+/home/tania/Becarios_bunsan/hola.txt
+/home/tania/hola.txt
+
+
+20) verificar el espacio ocupado y disponible en el sistema de archivo
+tania@tania-HP:~$ df -h
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+udev             5.5G      0  5.5G   0% /dev
+tmpfs            1.1G   2.1M  1.1G   1% /run
+/dev/sda2        916G    13G  857G   2% /
+tmpfs            5.5G    36M  5.5G   1% /dev/shm
+tmpfs            5.0M   4.0K  5.0M   1% /run/lock
+tmpfs            5.5G      0  5.5G   0% /sys/fs/cgroup
+/dev/loop0        62M    62M     0 100% /snap/core20/1328
+/dev/loop2        55M    55M     0 100% /snap/snap-store/558
+/dev/loop1        66M    66M     0 100% /snap/gtk-common-themes/1519
+/dev/loop3       128K   128K     0 100% /snap/bare/5
+/dev/loop5        44M    44M     0 100% /snap/snapd/14978
+/dev/loop4       249M   249M     0 100% /snap/gnome-3-38-2004/99
+/dev/sda1        511M   5.3M  506M   2% /boot/efi
+tmpfs            1.1G   140K  1.1G   1% /run/user/1000
+/dev/sdb1         29G    24G  5.6G  81% /media/tania/3CF4-C3AA
+/dev/loop6       272M   272M     0 100% /snap/dbeaver-ce/174
+/dev/loop7       111M   111M     0 100% /snap/core/12834
+/dev/loop8       220M   220M     0 100% /snap/code/92
+/dev/loop9        56M    56M     0 100% /snap/core18/2344
+/dev/loop10      251M   251M     0 100% /snap/zoom-client/170
+
+21) despues de ejecutar todos los comandos crear un archivo llamado commands.txt con el historial y enviarlo a mi correo: juan.galicia@bunsan.io con el titulo: cli exercises, de esta manera evaluare como resolvieron cada uno de los puntos.
