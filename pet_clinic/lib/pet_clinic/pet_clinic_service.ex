@@ -17,6 +17,8 @@ defmodule PetClinic.PetClinicService do
       [%Pet{}, ...]
 
   """
+
+
   def list_pets do
     Repo.all(Pet)
   end
@@ -35,6 +37,11 @@ defmodule PetClinic.PetClinicService do
       ** (Ecto.NoResultsError)
 
   """
+
+  def list_pets_by_type(type) do
+    Repo.all(from p in Pet, where: p.type == ^type)
+  end
+
   def get_pet!(id), do: Repo.get!(Pet, id)
 
   @doc """

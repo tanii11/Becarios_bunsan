@@ -19,6 +19,7 @@ defmodule PetClinicWeb.Router do
 
     get "/", PageController, :index
     resources "/pets", PetController
+    get "/pets/by_type/:type", PetController, :index_by_type
     resources "/expert", ExpertController
 
 
