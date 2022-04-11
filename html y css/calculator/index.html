@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <section>
+        <header>
+            <h1 class="title">calc</h1>
+            <div class="theme">
+                <h5>THEME</h5>
+                <div class="options">
+                    <div class="label">
+                        <label for="uno">1</label>
+                        <label for="dos">2</label>
+                        <label for="tres">3</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="uno" name="radio" value="uno" checked>
+                        <input type="radio" id="dos" name="radio" value="dos">
+                        <input type="radio" id="tres" name="radio" value="tres">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <main>
+            <div class="back">
+                <input type="text" id="pantalla" name="pantalla" pattern="/^[0-9]$/">
+            </div>
+            <br>
+            <div class="container">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="itemD">DEL</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>+</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>-</button>
+                <button>.</button>
+                <button>0</button>
+                <button>/</button>
+                <button>x</button>
+                <button class="itemR">RESET</button>
+                <button class="itemI">=</button>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
