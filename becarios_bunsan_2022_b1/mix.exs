@@ -5,7 +5,7 @@ defmodule BecariosBunsan2022B1.MixProject do
     [
       app: :becarios_bunsan_2022_b1,
       version: "0.1.0",
-      elixir: "~> 1.9",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
@@ -35,7 +35,7 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:sweet_xml, "~> 0.7.1"},
       {:libgraph, "~> 0.13.3"},
       {:tzdata, "~> 1.1"},
-      { :excoveralls ,  "~> 0.10" ,  solo: :test } , 
+      { :excoveralls ,  "~> 0.10" ,  solo: :test } ,
 
     ]
   end

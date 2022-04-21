@@ -1,10 +1,12 @@
 import SweetXml
 
 defmodule MetroCdmxChallenge do
+    # estructura de la linea 
     defmodule Line do
         defstruct [:name, :stations]
     end
-
+    
+    # estructura de la estacion
     defmodule Station do
         defstruct [:name, :coords]
     end
@@ -29,15 +31,11 @@ defmodule MetroCdmxChallenge do
               name:
               doc
               |> xpath(~x"//Document/Folder[2]/Placemark[contains(./Point/coordinates,\"#{coor}\")]/name/text()"l)
-              #|> List.first()
               |> List.to_string(),
-              #|> IO.inspect(),
               coords: coor
             }
           end)
 
-          #IO.inspect(item)
-          #IO.inspect(estaciones)
           %Line{
             name: item,
             stations: estaciones

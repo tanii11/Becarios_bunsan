@@ -23,6 +23,7 @@ defmodule PetClinic.PetClinicService do
     Repo.all(Pet)
   end
 
+  @spec list_pets_by_type(any) :: any
   @doc """
   Gets a single pet.
 
