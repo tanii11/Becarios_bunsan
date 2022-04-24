@@ -6,7 +6,7 @@ defmodule PetClinic.PetHealthExpert.Expert do
     field :age, :integer
     field :email, :string
     field :name, :string
-    field :sex, :string
+    field :sex, Ecto.Enum, values: [:male, :female]
     field :specialities, :string
 
     has_many :pets, PetClinic.PetClinicService.Pet

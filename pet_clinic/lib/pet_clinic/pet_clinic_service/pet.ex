@@ -5,7 +5,7 @@ defmodule PetClinic.PetClinicService.Pet do
   schema "pets" do
     field :age, :integer
     field :name, :string
-    field :sex, :string
+    field :sex, Ecto.Enum, values: [:male, :female]
     field :type, :string
 
     belongs_to :owner, PetClinic.PetOwner.Owner
