@@ -6,6 +6,7 @@ defmodule PetClinic.AppointmentService do
   import Ecto.Query, warn: false
   alias PetClinic.Repo
   alias PetClinic.Appointment
+  alias PetClinic.PetClinicService.Pet
 
   alias PetClinic.AppointmentService.ExpertSchedule
 
@@ -22,37 +23,43 @@ defmodule PetClinic.AppointmentService do
     Repo.all(ExpertSchedule)
   end
 
+  def new_appointment(expert_id, pet_id, datetime) do
+    if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
+      {:error, "expert with id = #{expert_id} doesn´t exist"}
+    else
+      if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
+        {:error, "pet with id = #{pet_id} doesn´t exist"  }
+      else
+        time = NaiveDateTime.to_time(datetime)
+        date = NaiveDateTime.to_date(datetime)
+        options = available_slots(expert_id, date, date)
+
+        if Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end) == [] do
+          {:error, "This schedule is already busy"}
+        else
+           appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: DateTime.from_naive!(datetime, "Etc/UTC")}
+           Repo.insert(appointment)
+        end
+      end
+    end
+  end
 
   def available_slots(expert_id, from_date, to_date) do
     schedule = Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id)
-    init_date = max_date(from_date, schedule.week_start)
-    finish_date = min_date(to_date, schedule.week_end)
-    days_range = Date.range(init_date, finish_date)
-
-    Map.new(days_range, fn d->
-      {d, repeat(d, schedule, expert_id)}
-    end)
+    if schedule == nil do
+      {:error, "expert with id = #{expert_id} doesn´t exist"}
+    else
+      #obtener el inicio y fin de rango
+      init_date = max_date(from_date, schedule.week_start)
+      finish_date = min_date(to_date, schedule.week_end)
+      days_range = Date.range(init_date, finish_date)
+      Map.new(days_range, fn d->
+        {d, repeat(d, schedule, expert_id)}
+      end)
+    end
   end
 
-  def new_appointment(expert_id, pet_id, datetime) do
-    Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id)
 
-    time = NaiveDateTime.to_time(datetime)
-    date = NaiveDateTime.to_date(datetime)
-    options = available_slots(expert_id, date, date)
-
-    dt = Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end)
-
-    appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: datetime}
-    Repo.insert(appointment)
-
-  end
-
-  @spec repeat(
-          %{:calendar => atom, :day => any, :month => any, :year => any, optional(any) => any},
-          atom | map,
-          any
-        ) :: list
   def repeat(init_date, schedule, expert_id) do
     {initial_time, ending_time} = get_day(init_date, schedule)
     slots = time_range(initial_time, ending_time)

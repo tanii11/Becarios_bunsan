@@ -17,6 +17,7 @@ body {
 }
 .home-layout .home-layout-content {
   height: 100%;
+  overflow-y: hidden;
 }
 #profile-box {
   background-image: var(--main-gradiente);
@@ -150,6 +151,8 @@ body {
 
 .issues-list-container {
   margin-top: calc(var(--space-unit) * 3);
+  height: calc(100% -145px);
+  overflow-y: auto;
 }
 
 .issue .comments {
@@ -168,3 +171,17 @@ body {
   align-items: center;
   cursor: pointer;
 } 
+
+/*  SCROLL BAR*/
+.issues-list-container::-webkit-scrollbar{
+  width: 3px;
+}
+.issues-list-container::-webkit-scrollbar-track{
+  background: #f1f1f17c;
+}
+.issues-list-container::-webkit-scrollbar-thumb{
+  background:rgba(200, 200, 200, 0.5);
+}
+.issues-list-container::-webkit-scrollbar-thumb:hover{
+  background:rgba(85, 85, 85, 0.47);
+}
