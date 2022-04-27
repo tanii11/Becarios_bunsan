@@ -12,6 +12,7 @@ defmodule PetClinic.PetClinicService.Pet do
     belongs_to :owner, PetClinic.PetOwner.Owner
     belongs_to :expert, PetClinic.PetHealthExpert.Expert
 
+    has_many :appoiments, PetClinic.Appointment
 
     timestamps()
   end

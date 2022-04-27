@@ -7,9 +7,12 @@ defmodule PetClinic.PetHealthExpert.Expert do
     field :email, :string
     field :name, :string
     field :sex, Ecto.Enum, values: [:male, :female]
-    field :specialities, :string
 
     has_many :pets, PetClinic.PetClinicService.Pet
+    many_to_many :specialities, PetClinic.PetType, join_through: PetClinic.ExpertSpecialities
+
+    has_many :appoiments, PetClinic.Appointment
+    has_one :expert_schedules, PetClinic.AppointmentService.ExpertSchedule
 
     timestamps()
   end
