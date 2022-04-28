@@ -24,16 +24,18 @@ defmodule PetClinic.AppointmentService do
   end
 
   def new_appointment(expert_id, pet_id, datetime) do
+    #validar el expert_id
     if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
       {:error, "expert with id = #{expert_id} doesn´t exist"}
     else
+        #validar el pet_id
       if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
         {:error, "pet with id = #{pet_id} doesn´t exist"  }
       else
         time = NaiveDateTime.to_time(datetime)
         date = NaiveDateTime.to_date(datetime)
         options = available_slots(expert_id, date, date)
-
+          #validar que no se repita el horario
         if Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end) == [] do
           {:error, "This schedule is already busy"}
         else
@@ -53,6 +55,7 @@ defmodule PetClinic.AppointmentService do
       init_date = max_date(from_date, schedule.week_start)
       finish_date = min_date(to_date, schedule.week_end)
       days_range = Date.range(init_date, finish_date)
+      #usar map.new para que se guarden como mapa
       Map.new(days_range, fn d->
         {d, repeat(d, schedule, expert_id)}
       end)
@@ -61,18 +64,22 @@ defmodule PetClinic.AppointmentService do
 
 
   def repeat(init_date, schedule, expert_id) do
+    #get_day obtiene el dia de la semana
     {initial_time, ending_time} = get_day(init_date, schedule)
     slots = time_range(initial_time, ending_time)
 
+    #otiene el datetime de las citas del expert
     appointment = Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
     |> Enum.filter(fn a ->
       Date.compare(init_date, DateTime.to_date(a)) == :eq
     end)
 
+    #obtiene solo el time de las citas
     busy = Enum.map(appointment, fn a ->
       DateTime.to_time(a)
     end)
 
+    #filtra las citas de los rangos
     Enum.filter(slots, fn slot ->
       Enum.all?(busy, fn time ->
         Time.compare(slot, time) != :eq
@@ -84,7 +91,7 @@ defmodule PetClinic.AppointmentService do
     case Time.compare(init_time, end_time) do
       :gt -> []
       :eq -> [init_time]
-      :lt ->
+      :lt -> #recursion para crear los rangos de media hora
         rec = Time.add(init_time, 1800)
         [init_time | time_range(rec, end_time)]
     end
