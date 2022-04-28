@@ -24,6 +24,7 @@ defmodule PetClinic.AppointmentService do
   end
 
   def new_appointment(expert_id, pet_id, datetime) do
+    new_datetime = DateTime.from_naive!(datetime, "Etc/UTC")
     #validar el expert_id
     if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
       {:error, "expert with id = #{expert_id} doesn´t exist"}
@@ -32,15 +33,21 @@ defmodule PetClinic.AppointmentService do
       if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
         {:error, "pet with id = #{pet_id} doesn´t exist"  }
       else
-        time = NaiveDateTime.to_time(datetime)
-        date = NaiveDateTime.to_date(datetime)
-        options = available_slots(expert_id, date, date)
-          #validar que no se repita el horario
-        if Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end) == [] do
-          {:error, "This schedule is already busy"}
+        #validar que la cita no sea en el pasado
+        if new_datetime < DateTime.utc_now() do
+          {:error, "datetime is in the past"}
         else
-           appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: DateTime.from_naive!(datetime, "Etc/UTC")}
-           Repo.insert(appointment)
+          time = DateTime.to_time(new_datetime)
+          date = DateTime.to_date(new_datetime)
+          options = available_slots(expert_id, date, date)
+
+          #validar que no se repita el horario
+          if Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end) == [] do
+            {:error, "This schedule is already busy or unavailable time slot"}
+          else
+             appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: DateTime.from_naive!(datetime, "Etc/UTC")}
+             Repo.insert(appointment)
+          end
         end
       end
     end
@@ -54,11 +61,15 @@ defmodule PetClinic.AppointmentService do
       #obtener el inicio y fin de rango
       init_date = max_date(from_date, schedule.week_start)
       finish_date = min_date(to_date, schedule.week_end)
-      days_range = Date.range(init_date, finish_date)
-      #usar map.new para que se guarden como mapa
-      Map.new(days_range, fn d->
-        {d, repeat(d, schedule, expert_id)}
-      end)
+      if finish_date < init_date do
+        {:error, "wrong date range"}
+      else
+        days_range = Date.range(init_date, finish_date)
+        #usar map.new para que se guarden como mapa
+        Map.new(days_range, fn d->
+          {d, repeat(d, schedule, expert_id)}
+        end)
+      end
     end
   end
 
