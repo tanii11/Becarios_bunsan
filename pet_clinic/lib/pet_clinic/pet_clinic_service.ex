@@ -7,6 +7,7 @@ defmodule PetClinic.PetClinicService do
   alias PetClinic.Repo
 
   alias PetClinic.PetClinicService.Pet
+  alias PetClinic.PetType
 
   @doc """
   Returns the list of pets.
@@ -20,7 +21,7 @@ defmodule PetClinic.PetClinicService do
 
 
   def list_pets do
-    Repo.all(Pet)
+    Repo.all(Pet) |> Repo.preload(:type)
   end
 
   @spec list_pets_by_type(any) :: any
@@ -43,7 +44,7 @@ defmodule PetClinic.PetClinicService do
     Repo.all(from p in Pet, where: p.type == ^type)
   end
 
-  def get_pet!(id), do: Repo.get!(Pet, id)
+  def get_pet!(id), do: Repo.get!(Pet, id) |> Repo.preload(:type)
 
   @doc """
   Creates a pet.
@@ -108,5 +109,9 @@ defmodule PetClinic.PetClinicService do
   """
   def change_pet(%Pet{} = pet, attrs \\ %{}) do
     Pet.changeset(pet, attrs)
+  end
+
+  def list_pet_types() do
+    Repo.all(PetType)
   end
 end

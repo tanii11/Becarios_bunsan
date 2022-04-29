@@ -31,13 +31,25 @@
             <div class="details mb">               
               <div>
                 <strong> Type</strong>
-                <p><%= @pet.type %></p>
+                <p><%= @pet.type.name %></p>
               </div>
+            
             </div>
             <strong> Sex </strong>
             <p class="description mb">
               <%= @pet.sex %>
             </p>
+
+            <strong> Owner </strong>
+            <p class="description mb">
+              <%= @owner.name %>
+            </p>
+            
+            <strong> Preferred Expert </strong>
+            <p class="description mb">
+              <%= @expert.name %>
+            </p>
+
             <div class="details mb">               
               <div>
                 <span><%= link "Edit", to: Routes.pet_path(@conn, :edit, @pet) %></span> |
