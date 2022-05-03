@@ -1,0 +1,16 @@
+@import "./style.css";
+
+.field {
+    width: 80%;
+    color: var(--dark-color);
+    background-color: var(--base-color);
+    border-radius: var(--space-unit);
+    border: none;
+}
+
+.text, h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(var(--space-unit)*2);
+}

@@ -1,0 +1,26 @@
+@import "./style.css";
+
+.grid-layout-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: calc(var(--space-unit) * 3);
+    margin-top: calc(var(--space-unit) * 3);
+} 
+.details{
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--space-unit) * 2);
+}
+h4, p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--space-unit);
+}
+.amount{
+    padding: var(--space-unit);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: var(--space-unit);
+    align-content: center;
+}

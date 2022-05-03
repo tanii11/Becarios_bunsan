@@ -1,0 +1,107 @@
+@import "./reset-styles.css";
+@import "./variables.css";
+
+.container {
+    margin: calc(var(--space-unit) * 4) auto 0;
+    max-width: 1000px;
+    height: 100%;    
+}
+
+body {
+    background-color: var(--base-color);
+    font-family: 'Rubik', sans-serif;
+}
+.navbar { 
+    background: var(--dark-color);
+    padding: calc(var(--space-unit) * 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--space-unit);
+
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+.menu li { 
+    font-size: var(--medium-font); 
+    padding: calc(var(--space-unit)*2) var(--space-unit);
+    white-space: nowrap; 
+} 
+
+.text-item{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: var(--large-font);
+}
+.text-item:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    width: 50px;
+}
+
+.box {
+    border-radius: var(--space-unit);
+    padding: calc(var(--space-unit) * 2);
+    background-color: var(--white-color);
+    box-shadow: 2px, 4px, var(--dark-color);
+    margin-top: var(--space-unit);
+}
+.box-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+.box-primary:hover{
+    background-color: var(--secondary-color);
+}
+.box-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+.box-secondary:hover{
+    background-color: var(--tertiary-color);
+}
+.box-tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+.box-tertiary:hover{
+    background-color: var(--last-color);
+}
+.box-last {
+    background-color: var(--last-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+.box-last:hover{
+    background-color: var(--secondary-color);
+}
+
+.button {
+    color: var(--white-color);
+    border-radius: var(--space-unit);
+    border: none;
+    cursor: pointer;
+    padding: var(--space-unit) var(--space-unit);
+}
+.button-sucess {
+    background-color: var(--dark-color);
+}
+.button-sucess:hover {
+    background-color: var(--primary-color);
+}
