@@ -31,7 +31,7 @@
             <div class="details mb">               
               <div>
                 <strong> SPECIALITIES</strong>
-                <p><%= @expert.specialities %></p>
+                <p><%= @expert.specialities |> Enum.map(&(&1.name <> " "))%></p>
               </div>
             </div>
             <strong> Sex </strong>

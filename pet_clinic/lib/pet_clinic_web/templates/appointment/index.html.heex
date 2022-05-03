@@ -1,0 +1,28 @@
+<h1>Listing Appointments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expert</th>
+      <th>DateTime</th>
+      <th>Pet Name</th>
+      <th>Type</th>
+      <th>Owner Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for appointment <- @appointments do %>
+        <tr>
+        <td><%= appointment.expert.name %></td>
+        <td><%= DateTime.to_iso8601(appointment.datetime) %></td>
+        <td><%= appointment.pet.name %></td>
+        <td><%= appointment.pet.type.name %></td>
+        <td><%= appointment.pet.owner.name %></td>
+
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+

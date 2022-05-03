@@ -23,6 +23,25 @@ defmodule PetClinic.AppointmentService do
     Repo.all(ExpertSchedule)
   end
 
+
+  def get_appointment(expert_id, date) do
+    # Repo.all(from a in Appointment, where: a.expert_id == ^expert_id
+    # and ilike(a.datetime, ^"%#{date}%"), select: a.datetime)
+
+    datetimes = Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
+
+    dt = Enum.filter(datetimes, fn d->
+      DateTime.to_date(d) |> Date.compare(Date.from_iso8601!(date)) == :eq
+    end)
+
+    Enum.map(dt, fn d ->
+      Repo.one(from a in Appointment, where: a.expert_id == ^expert_id and a.datetime == ^d) |> Repo.preload([:expert, pet: [:owner, :type]])
+    end)
+
+  end
+
+
+  @spec new_appointment(any, any, NaiveDateTime.t()) :: any
   def new_appointment(expert_id, pet_id, datetime) do
     new_datetime = DateTime.from_naive!(datetime, "Etc/UTC")
     #validar el expert_id

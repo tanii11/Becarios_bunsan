@@ -22,6 +22,7 @@ defmodule PetClinicWeb.Router do
     get "/pets/by_type/:type", PetController, :index_by_type
     resources "/expert", ExpertController
     resources "/owners", OwnerController
+    get "/health_experts/:id/schedule/:datetime", AppointmentController, :index
 
 
   end
