@@ -15,9 +15,11 @@ defmodule CalculatorAgent do
   def sub(pid, val) do
     Agent.update(pid, fn p -> p - val end)
   end
+
   def mult(pid, val) do
     Agent.update(pid, fn p -> p * val end)
   end
+
   def div(pid, val) do
     Agent.update(pid, fn p -> p / val end)
   end

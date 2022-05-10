@@ -30,6 +30,7 @@ defmodule ProcessRing do
       {:config, next_pid, main} ->
         IO.puts("pid: #{inspect(self())}, next: #{inspect(next_pid)} main: #{main}")
         process_msg(next_pid, main)
+
       _ ->
         :ok
     end
@@ -39,16 +40,21 @@ defmodule ProcessRing do
     receive do
       {msg, n, total_rounds} ->
         rem_rounds = rem_rounds(main, n)
+
         case rem_rounds do
-          :done -> :ok
+          :done ->
+            :ok
+
           _ ->
             round = total_rounds - rem_rounds
             IO.puts("Process #{inspect(self())} received message \"#{msg}\", round #{round}")
             send(next, {msg, rem_rounds, total_rounds})
         end
+
       _ ->
         :ok
     end
+
     process_msg(next, main)
   end
 

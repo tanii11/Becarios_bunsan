@@ -18,5 +18,4 @@ defmodule FizzBuzz do
       true -> IO.puts(x)
     end
   end
-
 end

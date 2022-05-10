@@ -7,14 +7,16 @@ defmodule DataDrivenTest do
     {7, 4, 11},
     {5, 5, 13},
     {3, 12, 15},
-    {8, 8, 16} # Error intencional
+    # Error intencional
+    {8, 8, 16}
   ]
-  for {a , b , c} <- data do
+
+  for {a, b, c} <- data do
     @a a
     @b b
     @c c
     test "sum of #{@a} and #{@b} should equal #{@c}" do
-      assert SUT.sum(@a , @b) == @c
+      assert SUT.sum(@a, @b) == @c
     end
   end
 end

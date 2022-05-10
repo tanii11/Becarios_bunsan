@@ -10,13 +10,13 @@ defmodule BecariosBunsan2022B1.MixProject do
       deps: deps(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-      coveralls: :test,
-      "coveralls.detail": :test,
-      "coveralls.post": :test,
-      "coveralls.html": :test
-    ]
-    # if you want to use espec,
-    # test_coverage: [tool: ExCoveralls, test_task: "espec"]
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
+      # if you want to use espec,
+      # test_coverage: [tool: ExCoveralls, test_task: "espec"]
     ]
   end
 
@@ -35,7 +35,7 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:sweet_xml, "~> 0.7.1"},
       {:libgraph, "~> 0.13.3"},
       {:tzdata, "~> 1.1"},
-      {:excoveralls, "~> 0.10", solo: :test },
+      {:excoveralls, "~> 0.10", solo: :test},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
