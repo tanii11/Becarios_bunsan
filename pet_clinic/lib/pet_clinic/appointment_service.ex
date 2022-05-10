@@ -23,36 +23,36 @@ defmodule PetClinic.AppointmentService do
     Repo.all(ExpertSchedule)
   end
 
-
   def get_appointment(expert_id, date) do
     # Repo.all(from a in Appointment, where: a.expert_id == ^expert_id
     # and ilike(a.datetime, ^"%#{date}%"), select: a.datetime)
 
-    datetimes = Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
+    datetimes =
+      Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
 
-    dt = Enum.filter(datetimes , fn d ->
-      DateTime.to_date(d) |> Date.compare(Date.from_iso8601!(date)) == :eq
-    end)
+    dt =
+      Enum.filter(datetimes, fn d ->
+        DateTime.to_date(d) |> Date.compare(Date.from_iso8601!(date)) == :eq
+      end)
 
     Enum.map(dt, fn d ->
-      Repo.one(from a in Appointment, where: a.expert_id == ^expert_id and a.datetime == ^d) |> Repo.preload([:expert, pet: [:owner, :type]])
+      Repo.one(from a in Appointment, where: a.expert_id == ^expert_id and a.datetime == ^d)
+      |> Repo.preload([:expert, pet: [:owner, :type]])
     end)
-
   end
-
 
   @spec new_appointment(any, any, NaiveDateTime.t()) :: any
   def new_appointment(expert_id, pet_id, datetime) do
     new_datetime = DateTime.from_naive!(datetime, "Etc/UTC")
-    #validar el expert_id
+    # validar el expert_id
     if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
       {:error, "expert with id = #{expert_id} doesn´t exist"}
     else
-        #validar el pet_id
+      # validar el pet_id
       if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
-        {:error, "pet with id = #{pet_id} doesn´t exist"  }
+        {:error, "pet with id = #{pet_id} doesn´t exist"}
       else
-        #validar que la cita no sea en el pasado
+        # validar que la cita no sea en el pasado
         if new_datetime < DateTime.utc_now() do
           {:error, "datetime is in the past"}
         else
@@ -60,12 +60,18 @@ defmodule PetClinic.AppointmentService do
           date = DateTime.to_date(new_datetime)
           options = available_slots(expert_id, date, date)
 
-          #validar que no se repita el horario
-          if Map.get(options , date) |> Enum.filter(fn opt -> Time.compare(opt , time) == :eq end) == [] do
+          # validar que no se repita el horario
+          if Map.get(options, date) |> Enum.filter(fn opt -> Time.compare(opt, time) == :eq end) ==
+               [] do
             {:error, "This schedule is already busy or unavailable time slot"}
           else
-             appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: DateTime.from_naive!(datetime, "Etc/UTC")}
-             Repo.insert(appointment)
+            appointment = %Appointment{
+              expert_id: expert_id,
+              pet_id: pet_id,
+              datetime: DateTime.from_naive!(datetime, "Etc/UTC")
+            }
+
+            Repo.insert(appointment)
           end
         end
       end
@@ -74,54 +80,62 @@ defmodule PetClinic.AppointmentService do
 
   def available_slots(expert_id, from_date, to_date) do
     schedule = Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id)
+
     if schedule == nil do
       {:error, "expert with id = #{expert_id} doesn´t exist"}
     else
-      #obtener el inicio y fin de rango
+      # obtener el inicio y fin de rango
       init_date = max_date(from_date, schedule.week_start)
       finish_date = min_date(to_date, schedule.week_end)
+
       if finish_date < init_date do
         {:error, "wrong date range"}
       else
         days_range = Date.range(init_date, finish_date)
-        #usar map.new para que se guarden como mapa
-        Map.new(days_range , fn d ->
+        # usar map.new para que se guarden como mapa
+        Map.new(days_range, fn d ->
           {d, repeat(d, schedule, expert_id)}
         end)
       end
     end
   end
 
-
   def repeat(init_date, schedule, expert_id) do
-    #get_day obtiene el dia de la semana
+    # get_day obtiene el dia de la semana
     {initial_time, ending_time} = get_day(init_date, schedule)
     slots = time_range(initial_time, ending_time)
 
-    #otiene el datetime de las citas del expert
-    appointment = Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
-    |> Enum.filter(fn a ->
-      Date.compare(init_date, DateTime.to_date(a)) == :eq
-    end)
+    # otiene el datetime de las citas del expert
+    appointment =
+      Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
+      |> Enum.filter(fn a ->
+        Date.compare(init_date, DateTime.to_date(a)) == :eq
+      end)
 
-    #obtiene solo el time de las citas
-    busy = Enum.map(appointment, fn a ->
-      DateTime.to_time(a)
-    end)
+    # obtiene solo el time de las citas
+    busy =
+      Enum.map(appointment, fn a ->
+        DateTime.to_time(a)
+      end)
 
-    #filtra las citas de los rangos
+    # filtra las citas de los rangos
     Enum.filter(slots, fn slot ->
       Enum.all?(busy, fn time ->
         Time.compare(slot, time) != :eq
-     end)
+      end)
     end)
   end
 
   def time_range(init_time, end_time) do
     case Time.compare(init_time, end_time) do
-      :gt -> []
-      :eq -> [init_time]
-      :lt -> #recursion para crear los rangos de media hora
+      :gt ->
+        []
+
+      :eq ->
+        [init_time]
+
+      # recursion para crear los rangos de media hora
+      :lt ->
         rec = Time.add(init_time, 1800)
         [init_time | time_range(rec, end_time)]
     end
@@ -146,6 +160,7 @@ defmodule PetClinic.AppointmentService do
       :eq -> d1
     end
   end
+
   def max_date(d1, d2) do
     case Date.compare(d1, d2) do
       :gt -> d1
@@ -153,7 +168,6 @@ defmodule PetClinic.AppointmentService do
       :eq -> d1
     end
   end
-
 
   @doc """
   Gets a single expert_schedule.

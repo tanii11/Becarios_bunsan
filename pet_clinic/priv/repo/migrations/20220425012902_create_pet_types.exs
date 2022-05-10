@@ -18,7 +18,6 @@ defmodule PetClinic.Repo.Migrations.CreatePetTypes do
     query = "select distinct type from pets"
     types = Ecto.Adapters.SQL.query!(Repo, query, []) |> Map.get(:rows) |> List.flatten()
 
-
     flush()
 
     Enum.each(types, fn t ->
@@ -32,13 +31,12 @@ defmodule PetClinic.Repo.Migrations.CreatePetTypes do
 
     flush()
 
-    IO.inspect(pets);
+    IO.inspect(pets)
 
     Enum.each(pets, fn [pet_id, pet_type] ->
       %PetType{id: pet_type_id} = Repo.get_by(PetType, name: pet_type)
       update = "update pets set type_id = $1::integer where id = $2::integer"
       Ecto.Adapters.SQL.query!(Repo, update, [pet_type_id, pet_id])
     end)
-
   end
 end

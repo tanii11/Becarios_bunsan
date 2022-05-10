@@ -23,10 +23,7 @@ defmodule PetClinicWeb.Router do
     resources "/expert", ExpertController
     resources "/owners", OwnerController
     get "/health_experts/:id/schedule/:datetime", AppointmentController, :index
-
-
   end
-
 
   # Other scopes may use custom stacks.
   # scope "/api", PetClinicWeb do

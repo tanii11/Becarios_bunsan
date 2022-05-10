@@ -11,7 +11,6 @@ defmodule PetClinicWeb.PetController do
     render(conn, "index.html", pets: pets)
   end
 
-
   def index_by_type(conn, %{"type" => type}) do
     pets = PetClinicService.list_pets_by_type(type)
     render(conn, "index_by_type.html", pets: pets)
@@ -22,8 +21,13 @@ defmodule PetClinicWeb.PetController do
     pet_types = PetClinicService.list_pet_types()
     owners = PetOwner.list_owners()
     experts = PetHealthExpert.list_experts()
+
     render(conn, "new.html",
-    pet_types: pet_types, owners: owners, experts: experts, changeset: changeset)
+      pet_types: pet_types,
+      owners: owners,
+      experts: experts,
+      changeset: changeset
+    )
   end
 
   def create(conn, %{"pet" => pet_params}) do
@@ -38,7 +42,6 @@ defmodule PetClinicWeb.PetController do
     end
   end
 
-
   def show(conn, %{"id" => id}) do
     pet = PetClinicService.get_pet!(id)
     owner = PetClinic.PetOwner.get_owner!(pet.owner_id)
@@ -52,7 +55,14 @@ defmodule PetClinicWeb.PetController do
     pet_types = PetClinicService.list_pet_types()
     owners = PetOwner.list_owners()
     experts = PetHealthExpert.list_experts()
-    render(conn, "edit.html", pet: pet, pet_types: pet_types, owners: owners, experts: experts, changeset: changeset)
+
+    render(conn, "edit.html",
+      pet: pet,
+      pet_types: pet_types,
+      owners: owners,
+      experts: experts,
+      changeset: changeset
+    )
   end
 
   def update(conn, %{"id" => id, "pet" => pet_params}) do

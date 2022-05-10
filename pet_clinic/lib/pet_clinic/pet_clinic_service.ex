@@ -19,7 +19,6 @@ defmodule PetClinic.PetClinicService do
 
   """
 
-
   def list_pets do
     Repo.all(Pet) |> Repo.preload(:type)
   end

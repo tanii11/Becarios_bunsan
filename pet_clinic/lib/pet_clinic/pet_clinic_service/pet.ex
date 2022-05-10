@@ -9,7 +9,7 @@ defmodule PetClinic.PetClinicService.Pet do
     field :age, :integer
     field :name, :string
     field :sex, Ecto.Enum, values: [:male, :female]
-    #field :type, :string
+    # field :type, :string
     belongs_to :type, PetClinic.PetType
 
     belongs_to :owner, PetClinic.PetOwner.Owner

@@ -5,7 +5,6 @@ defmodule PetClinic.Repo.Migrations.ExpertSpecialitiesToCatalog do
   import Ecto.Query
 
   def change do
-
     create table("expert_specialities") do
       add :expert_id, references("experts")
       add :pet_type_id, references("pet_types")
@@ -19,9 +18,11 @@ defmodule PetClinic.Repo.Migrations.ExpertSpecialitiesToCatalog do
     flush()
 
     Enum.map(experts, fn [id, sps] ->
-      sps |> String.split(",") |> Enum.map(fn sp ->
+      sps
+      |> String.split(",")
+      |> Enum.map(fn sp ->
         sp2 = String.trim(sp)
-        sp_id = (from s in "pet_types", where: s.name == ^sp2, select: s.id) |> Repo.one!()
+        sp_id = from(s in "pet_types", where: s.name == ^sp2, select: s.id) |> Repo.one!()
         Repo.insert(%ExpertSpecialities{expert_id: id, pet_type_id: sp_id})
       end)
     end)
@@ -29,6 +30,5 @@ defmodule PetClinic.Repo.Migrations.ExpertSpecialitiesToCatalog do
     alter table("experts") do
       remove :specialities
     end
-
   end
 end
