@@ -1,4 +1,8 @@
 defmodule WordCount do
+@moduledoc """
+The following program consists of finding the number of words
+that are repeated in a text that the user can insert.
+"""
     def frequencies_tasks(path) do
         mapas = path
         |> File.stream!()
@@ -7,8 +11,8 @@ defmodule WordCount do
         |> Enum.map(fn task -> Task.await(task) end)
 
         Enum.reduce(mapas, %{}, fn x, acc ->
-            Map.merge(x, acc, fn _k, v1, v2->
-               v1+v2
+            Map.merge(x , acc , fn _k , v1 , v2 ->
+               v1 + v2
             end)
         end)
     end
@@ -20,7 +24,8 @@ defmodule WordCount do
 
     def word_count(doc) do
         doc = String.downcase(doc)
-        doc1 = String.split(doc, [",",";",":",".","_","-","|","°","#","$","%","&","/","(",")","()","{}","=","+","*",">","<","[","]","\r","?","¿", "!","¡"]) |> List.to_string()
+        doc1 = String.split(doc, ["," , ";" , ":" , "." , "_" , "-" , "|" , "°" , "#" , "$" , "%" , "&" , "/" , "(" , ")" , "()" , "{}" , "=" , "+" , "*" , ">" , "<" , "[" , "]" , "\r" , "?" , "¿" , "!" , "¡"])
+        |> List.to_string()
         doc2 = String.split(doc1)
         mapa = Enum.map(doc2, fn x ->
             cont = Enum.count(doc2, fn s ->

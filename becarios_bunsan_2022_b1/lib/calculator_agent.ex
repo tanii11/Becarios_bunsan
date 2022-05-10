@@ -1,5 +1,8 @@
 defmodule CalculatorAgent do
-
+  @moduledoc """
+  The following program consists of making a calculator with the operations
+  of addition, subtraction, multiplication and division with the use of the Agent
+  """
   def init() do
     {:ok, pid} = Agent.start(fn -> 0 end)
     pid

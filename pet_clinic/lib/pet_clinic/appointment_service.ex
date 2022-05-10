@@ -30,7 +30,7 @@ defmodule PetClinic.AppointmentService do
 
     datetimes = Repo.all(from a in Appointment, where: a.expert_id == ^expert_id, select: a.datetime)
 
-    dt = Enum.filter(datetimes, fn d->
+    dt = Enum.filter(datetimes , fn d ->
       DateTime.to_date(d) |> Date.compare(Date.from_iso8601!(date)) == :eq
     end)
 
@@ -61,7 +61,7 @@ defmodule PetClinic.AppointmentService do
           options = available_slots(expert_id, date, date)
 
           #validar que no se repita el horario
-          if Map.get(options, date) |> Enum.filter(fn opt-> Time.compare(opt, time) == :eq end) == [] do
+          if Map.get(options , date) |> Enum.filter(fn opt -> Time.compare(opt , time) == :eq end) == [] do
             {:error, "This schedule is already busy or unavailable time slot"}
           else
              appointment = %Appointment{expert_id: expert_id, pet_id: pet_id, datetime: DateTime.from_naive!(datetime, "Etc/UTC")}
@@ -85,7 +85,7 @@ defmodule PetClinic.AppointmentService do
       else
         days_range = Date.range(init_date, finish_date)
         #usar map.new para que se guarden como mapa
-        Map.new(days_range, fn d->
+        Map.new(days_range , fn d ->
           {d, repeat(d, schedule, expert_id)}
         end)
       end

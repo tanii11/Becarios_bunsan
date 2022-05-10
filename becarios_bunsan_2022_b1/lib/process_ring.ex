@@ -1,4 +1,8 @@
 defmodule ProcessRing do
+  @moduledoc """
+  The following program consists of making a ring of processes in order
+  to send a message between them the number of turns that the user indicates
+  """
   def init(n) do
     pids = Enum.map(1..n, fn _ -> spawn(&wait_for_config/0) end)
     next_pids = Enum.drop(pids, 1) ++ [hd(pids)]

@@ -1,4 +1,7 @@
 defmodule CounterAgent do
+  @moduledoc """
+  The following program consists of making a counter using recursion and processes
+  """
   use Agent
 
   def start(init_val) do

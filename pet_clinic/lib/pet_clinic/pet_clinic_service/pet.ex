@@ -1,4 +1,7 @@
 defmodule PetClinic.PetClinicService.Pet do
+  @moduledoc """
+  defines the schema/model of a pet that can arrive at the clinic
+  """
   use Ecto.Schema
   import Ecto.Changeset
 

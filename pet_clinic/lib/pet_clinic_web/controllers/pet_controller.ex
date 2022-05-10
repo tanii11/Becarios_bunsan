@@ -13,7 +13,7 @@ defmodule PetClinicWeb.PetController do
 
 
   def index_by_type(conn, %{"type" => type}) do
-    pets =PetClinicService.list_pets_by_type(type)
+    pets = PetClinicService.list_pets_by_type(type)
     render(conn, "index_by_type.html", pets: pets)
   end
 
