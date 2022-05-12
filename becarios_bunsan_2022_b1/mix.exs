@@ -36,7 +36,10 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:libgraph, "~> 0.13.3"},
       {:tzdata, "~> 1.1"},
       {:excoveralls, "~> 0.10", solo: :test},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:tesla, "~> 1.4"},
+      {:hackney, "~> 1.17"},
+      {:jason, ">= 1.0.0"}
     ]
   end
 end
