@@ -19,7 +19,7 @@ defmodule GitHub do
     {:ok, name} = repo(client, owner, repo)
     name_repo = name.body["name"]
 
-    #%{:name => name_repo, :commits_num => commits_num, :languages => languages.body}
+    %{:name => name_repo, :commits_num => commits_num, :languages => languages.body}
   end
 
   defp new(token) do
