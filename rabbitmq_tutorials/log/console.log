@@ -1,265 +1,453 @@
-2022-05-11 20:32:19.776 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-11 20:32:19.788 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-11 20:32:19.826 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-11 20:32:19.827 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-11 20:32:19.827 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-11 20:32:19.828 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-11 20:32:19.996 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-11 20:32:19.996 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-11 20:32:20.024 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-11 20:32:20.033 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-11 20:32:20.034 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-11 21:22:41.967 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-11 21:22:41.984 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-11 21:22:42.003 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-11 21:22:42.003 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-11 21:22:42.003 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-11 21:22:42.004 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-11 21:22:42.164 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-11 21:22:42.165 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-11 21:22:42.191 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-11 21:22:42.201 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-11 21:22:42.201 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 10:19:23.709 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 10:19:23.717 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 10:19:23.733 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 10:19:23.733 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 10:19:23.733 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 10:19:23.734 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 10:19:23.867 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 10:19:23.867 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 10:19:23.890 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 10:19:23.899 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 10:19:23.899 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 10:19:34.983 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 10:19:34.990 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 10:19:35.006 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 10:19:35.006 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 10:19:35.006 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 10:19:35.006 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 10:19:35.141 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 10:19:35.141 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 10:19:35.163 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 10:19:35.172 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 10:19:35.172 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 10:42:13.366 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 10:42:13.375 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 10:42:13.387 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 10:42:13.388 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 10:42:13.388 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 10:42:13.388 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 10:42:13.527 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 10:42:13.527 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 10:42:13.551 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 10:42:13.562 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 10:42:13.562 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 10:44:55.563 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 10:44:55.570 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 10:44:55.585 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 10:44:55.585 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 10:44:55.589 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 10:44:55.589 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 10:44:55.723 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 10:44:55.723 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 10:44:55.744 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 10:44:55.753 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 10:44:55.753 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 11:16:48.395 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 11:16:48.402 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 11:16:48.423 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 11:16:48.423 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 11:16:48.423 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 11:16:48.423 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 11:16:48.553 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 11:16:48.554 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 11:16:48.580 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 11:16:48.589 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 11:16:48.589 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 11:18:43.128 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 11:18:43.135 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 11:18:43.147 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 11:18:43.148 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 11:18:43.148 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 11:18:43.148 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 11:18:43.289 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 11:18:43.289 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 11:18:43.311 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 11:18:43.319 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 11:18:43.320 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 15:11:18.505 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 15:11:18.514 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 15:11:18.530 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 15:11:18.530 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 15:11:18.531 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 15:11:18.531 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 15:11:18.694 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 15:11:18.694 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 15:11:18.720 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 15:11:18.730 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 15:11:18.730 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 17:20:15.034 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 17:20:15.055 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 17:20:15.056 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 17:20:15.056 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 17:20:15.057 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 17:20:15.061 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 17:20:15.212 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 17:20:15.213 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 17:20:15.238 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 17:20:15.247 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 17:20:15.249 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 18:03:04.556 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 18:03:04.573 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 18:03:04.601 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 18:03:04.601 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 18:03:04.601 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 18:03:04.601 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 18:03:04.808 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 18:03:04.808 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 18:03:04.837 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 18:03:04.853 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 18:03:04.854 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 18:44:08.163 [error] <0.523.0>@rabbit_framing_amqp_0_9_1:shortstr_size:178 CRASH REPORT Process <0.523.0> with 0 neighbours crashed with reason: bad argument in call to erlang:size(#{consumer_count => 0,message_count => 3,queue => <<"payments">>}) in rabbit_framing_amqp_0_9_1:shortstr_size/1 line 178
-2022-05-12 18:44:08.164 [error] <0.520.0>@rabbit_framing_amqp_0_9_1:shortstr_size:178 Supervisor {<0.520.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.14>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.522.0>, {<<"client 127.0.0.1:49264 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.523.0> exit with reason bad argument in call to erlang:size(#{consumer_count => 0,message_count => 3,queue => <<"payments">>}) in rabbit_framing_amqp_0_9_1:shortstr_size/1 line 178 in context child_terminated
-2022-05-12 18:44:08.164 [error] <0.520.0> Supervisor {<0.520.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.14>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.522.0>, {<<"client 127.0.0.1:49264 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.523.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 18:58:13.525 [error] <0.612.0>@rabbit_framing_amqp_0_9_1:encode_method_fields:964 CRASH REPORT Process <0.612.0> with 0 neighbours crashed with reason: bad argument in rabbit_framing_amqp_0_9_1:encode_method_fields/1 line 964
-2022-05-12 18:58:13.526 [error] <0.609.0>@rabbit_framing_amqp_0_9_1:encode_method_fields:964 Supervisor {<0.609.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.17>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.611.0>, {<<"client 127.0.0.1:49270 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.612.0> exit with reason bad argument in rabbit_framing_amqp_0_9_1:encode_method_fields/1 line 964 in context child_terminated
-2022-05-12 18:58:13.527 [error] <0.609.0> Supervisor {<0.609.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.17>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.611.0>, {<<"client 127.0.0.1:49270 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.612.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 18:58:30.040 [error] <0.636.0>@rabbit_framing_amqp_0_9_1:shortstr_size:178 CRASH REPORT Process <0.636.0> with 0 neighbours crashed with reason: bad argument in call to erlang:size(#{consumer_count => 0,message_count => 3,queue => <<"payments">>}) in rabbit_framing_amqp_0_9_1:shortstr_size/1 line 178
-2022-05-12 18:58:30.041 [error] <0.633.0>@rabbit_framing_amqp_0_9_1:shortstr_size:178 Supervisor {<0.633.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.18>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.635.0>, {<<"client 127.0.0.1:49272 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.636.0> exit with reason bad argument in call to erlang:size(#{consumer_count => 0,message_count => 3,queue => <<"payments">>}) in rabbit_framing_amqp_0_9_1:shortstr_size/1 line 178 in context child_terminated
-2022-05-12 18:58:30.042 [error] <0.633.0> Supervisor {<0.633.0>,amqp_channel_sup} had child writer started with rabbit_writer:start_link(#Port<0.18>, 1, 131072, rabbit_framing_amqp_0_9_1, <0.635.0>, {<<"client 127.0.0.1:49272 -> 127.0.0.1:5672">>,1}, false, 1000000000) at <0.636.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 20:30:15.048 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 20:30:15.057 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 20:30:15.070 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 20:30:15.070 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 20:30:15.070 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 20:30:15.071 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 20:30:15.205 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 20:30:15.205 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 20:30:15.227 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 20:30:15.236 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 20:30:15.236 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 20:31:51.327 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 20:31:51.336 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 20:31:51.350 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 20:31:51.351 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 20:31:51.351 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 20:31:51.351 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 20:31:51.488 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 20:31:51.488 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 20:31:51.510 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 20:31:51.521 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 20:31:51.521 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:17:35.011 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:17:35.021 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:17:35.036 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:17:35.037 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:17:35.037 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:17:35.037 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:17:35.199 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:17:35.199 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:17:35.224 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:17:35.234 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:17:35.234 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:17:40.668 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:17:40.676 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:17:40.690 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:17:40.690 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:17:40.690 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:17:40.690 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:17:40.840 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:17:40.840 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:17:40.865 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:17:40.875 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:17:40.875 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:32:24.117 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:32:24.129 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:32:24.145 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:32:24.146 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:32:24.146 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:32:24.146 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:32:24.309 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:32:24.309 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:32:24.338 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:32:24.348 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:32:24.348 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:35:36.810 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:35:36.810 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:35:36.811 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:35:36.813 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:35:36.814 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:35:36.816 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:40:56.337 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:40:56.345 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:40:56.359 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:40:56.359 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:40:56.359 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:40:56.359 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:40:56.523 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:40:56.524 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:40:56.553 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:40:56.562 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:40:56.562 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:45:37.377 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:45:37.386 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:45:37.407 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:45:37.407 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:45:37.408 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:45:37.408 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:45:37.545 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:45:37.545 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:45:37.571 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:45:37.582 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:45:37.583 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:45:55.912 [error] <0.322.0>@amqp_channel:handle_call:384 gen_server <0.322.0> terminated with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]}, {state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:45:55.947 [error] <0.322.0>@amqp_channel:handle_call:384 CRASH REPORT Process <0.322.0> with 0 neighbours crashed with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]}, {state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:45:55.947 [error] <0.320.0>@amqp_channel:handle_call:384 Supervisor {<0.320.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.311.0>, 1, <0.321.0>, {<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,1}) at <0.322.0> exit with reason no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]}, {state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384 in context child_terminated
-2022-05-12 21:45:55.949 [error] <0.320.0> Supervisor {<0.320.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.311.0>, 1, <0.321.0>, {<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,1}) at <0.322.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:45:55.949 [warning] <0.311.0> Connection (<0.311.0>) closing: internal error in channel (<0.322.0>): {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},{state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-2022-05-12 21:45:55.950 [error] <0.311.0> gen_server <0.311.0> terminated with reason: {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:45:55.966 [error] <0.311.0> CRASH REPORT Process <0.311.0> with 0 neighbours exited with reason: {channel0_died,method_field_shortstr_overflow} in gen_server:handle_common_reply/8 line 811
-2022-05-12 21:45:55.966 [error] <0.309.0> Supervisor {<0.309.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.310.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.311.0> exit with reason {channel0_died,method_field_shortstr_overflow} in context child_terminated
-2022-05-12 21:45:55.967 [error] <0.309.0> Supervisor {<0.309.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.310.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.311.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:46:20.343 [error] <0.337.0>@amqp_channel:handle_call:384 gen_server <0.337.0> terminated with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]}, {state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:46:20.345 [error] <0.337.0>@amqp_channel:handle_call:384 CRASH REPORT Process <0.337.0> with 0 neighbours crashed with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]}, {state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:46:20.346 [error] <0.335.0>@amqp_channel:handle_call:384 Supervisor {<0.335.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.328.0>, 1, <0.336.0>, {<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,1}) at <0.337.0> exit with reason no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]}, {state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384 in context child_terminated
-2022-05-12 21:46:20.348 [error] <0.335.0> Supervisor {<0.335.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.328.0>, 1, <0.336.0>, {<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,1}) at <0.337.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:46:20.348 [warning] <0.328.0> Connection (<0.328.0>) closing: internal error in channel (<0.337.0>): {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},{state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-2022-05-12 21:46:20.348 [error] <0.328.0> gen_server <0.328.0> terminated with reason: {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:46:20.351 [error] <0.328.0> CRASH REPORT Process <0.328.0> with 0 neighbours exited with reason: {channel0_died,method_field_shortstr_overflow} in gen_server:handle_common_reply/8 line 811
-2022-05-12 21:46:20.351 [error] <0.326.0> Supervisor {<0.326.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.327.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.328.0> exit with reason {channel0_died,method_field_shortstr_overflow} in context child_terminated
-2022-05-12 21:46:20.351 [error] <0.326.0> Supervisor {<0.326.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.327.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.328.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:46:43.597 [error] emulator Error in process <0.19661.0> with exit value:
-{undef,[{'Elixir.RabbitMQ.Producer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
-2022-05-12 21:46:43.605 [error] <0.121.0>@Elixir.RabbitMQ.Producer:module_info Supervisor {<0.121.0>,'Elixir.ElixirLS.LanguageServer.Dialyzer.Supervisor'} had child 'Elixir.ElixirLS.LanguageServer.Dialyzer' started with 'Elixir.ElixirLS.LanguageServer.Dialyzer':start_link({<0.117.0>,<<"/home/tania/Becarios_bunsan/rabbitmq_tutorials">>}) at <0.122.0> exit with reason call to undefined function 'Elixir.RabbitMQ.Producer':module_info(compile) in context child_terminated
-2022-05-12 21:47:44.853 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:47:44.860 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:47:44.876 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:47:44.877 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:47:44.877 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:47:44.877 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:47:45.042 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:47:45.042 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:47:45.066 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:47:45.077 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:47:45.077 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
-2022-05-12 21:49:00.220 [error] <0.354.0>@amqp_channel:handle_call:384 gen_server <0.354.0> terminated with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]}, {state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:49:00.220 [error] <0.354.0>@amqp_channel:handle_call:384 CRASH REPORT Process <0.354.0> with 0 neighbours crashed with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]}, {state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384
-2022-05-12 21:49:00.221 [error] <0.352.0>@amqp_channel:handle_call:384 Supervisor {<0.352.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.345.0>, 1, <0.353.0>, {<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,1}) at <0.354.0> exit with reason no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]}, {state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},...}) line 384 in context child_terminated
-2022-05-12 21:49:00.222 [error] <0.352.0> Supervisor {<0.352.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.345.0>, 1, <0.353.0>, {<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,1}) at <0.354.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:49:00.223 [warning] <0.345.0> Connection (<0.345.0>) closing: internal error in channel (<0.354.0>): {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},{state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-2022-05-12 21:49:00.224 [error] <0.345.0> gen_server <0.345.0> terminated with reason: {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:49:00.225 [error] <0.345.0> CRASH REPORT Process <0.345.0> with 0 neighbours exited with reason: {channel0_died,method_field_shortstr_overflow} in gen_server:handle_common_reply/8 line 811
-2022-05-12 21:49:00.226 [error] <0.343.0> Supervisor {<0.343.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.344.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.345.0> exit with reason {channel0_died,method_field_shortstr_overflow} in context child_terminated
-2022-05-12 21:49:00.226 [error] <0.343.0> Supervisor {<0.343.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.344.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.345.0> exit with reason reached_max_restart_intensity in context shutdown
-2022-05-12 21:49:13.651 [info] <0.44.0> Application lager started on node nonode@nohost
-2022-05-12 21:49:13.659 [info] <0.44.0> Application xmerl started on node nonode@nohost
-2022-05-12 21:49:13.674 [info] <0.44.0> Application sasl started on node nonode@nohost
-2022-05-12 21:49:13.674 [info] <0.44.0> Application tools started on node nonode@nohost
-2022-05-12 21:49:13.675 [info] <0.44.0> Application jsx started on node nonode@nohost
-2022-05-12 21:49:13.675 [info] <0.44.0> Application recon started on node nonode@nohost
-2022-05-12 21:49:13.820 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
-2022-05-12 21:49:13.821 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
-2022-05-12 21:49:13.844 [info] <0.44.0> Application amqp_client started on node nonode@nohost
-2022-05-12 21:49:13.852 [info] <0.44.0> Application amqp started on node nonode@nohost
-2022-05-12 21:49:13.852 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:20:32.635 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:20:32.644 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:20:32.656 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:20:32.657 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:20:32.657 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:20:32.657 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:20:32.794 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:20:32.795 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:20:32.817 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:20:32.826 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:20:32.826 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:20:39.605 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:20:39.613 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:20:39.626 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:20:39.627 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:20:39.627 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:20:39.627 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:20:39.796 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:20:39.796 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:20:39.820 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:20:39.829 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:20:39.829 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:23:14.321 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:23:14.329 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:23:14.346 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:23:14.346 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:23:14.346 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:23:14.347 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:23:14.495 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:23:14.496 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:23:14.521 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:23:14.531 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:23:14.531 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:29:00.524 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:29:00.532 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:29:00.545 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:29:00.545 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:29:00.546 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:29:00.546 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:29:00.685 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:29:00.685 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:29:00.708 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:29:00.716 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:29:00.717 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:29:14.540 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:29:14.547 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:29:14.560 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:29:14.561 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:29:14.561 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:29:14.561 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:29:14.701 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:29:14.702 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:29:14.728 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:29:14.737 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:29:14.738 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:30:45.883 [error] <0.307.0> gen_server <0.307.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:30:45.908 [error] <0.307.0> CRASH REPORT Process <0.307.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:30:45.908 [error] <0.306.0> Supervisor {<0.306.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49482 -> 127.0.0.1:5672">>,1}) at <0.307.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:30:45.908 [error] <0.306.0> Supervisor {<0.306.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49482 -> 127.0.0.1:5672">>,1}) at <0.307.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:32:00.302 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,100,108,86,74,48,121,79,69,98,67,77,66,80,84,122,100,120,56,119,83,115,119,0,0,0,0,0,0,0,9,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 11:32:00.302 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:32:00.302 [info] <0.301.0> Dropping frame {content_body,<<"alo_payments">>} for invalid or closed channel number 1
+2022-05-13 11:32:00.303 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,100,108,86,74,48,121,79,69,98,67,77,66,80,84,122,100,120,56,119,83,115,119,0,0,0,0,0,0,0,10,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 11:32:00.303 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:32:00.303 [info] <0.301.0> Dropping frame {content_body,<<"alo_payments">>} for invalid or closed channel number 1
+2022-05-13 11:33:42.675 [error] emulator Error in process <0.28747.0> with exit value:
+{undef,[{'Elixir.RabbitMQ.Consumer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
+2022-05-13 11:33:42.677 [error] <0.121.0>@Elixir.RabbitMQ.Consumer:module_info Supervisor {<0.121.0>,'Elixir.ElixirLS.LanguageServer.Dialyzer.Supervisor'} had child 'Elixir.ElixirLS.LanguageServer.Dialyzer' started with 'Elixir.ElixirLS.LanguageServer.Dialyzer':start_link({<0.117.0>,<<"/home/tania/Becarios_bunsan/rabbitmq_tutorials">>}) at <0.19732.0> exit with reason call to undefined function 'Elixir.RabbitMQ.Consumer':module_info(compile) in context child_terminated
+2022-05-13 11:34:58.040 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:34:58.048 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:34:58.061 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:34:58.061 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:34:58.061 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:34:58.062 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:34:58.237 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:34:58.238 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:34:58.268 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:34:58.279 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:34:58.280 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:35:03.480 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:35:03.488 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:35:03.502 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:35:03.502 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:35:03.502 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:35:03.502 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:35:03.661 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:35:03.662 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:35:03.687 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:35:03.697 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:35:03.697 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:37:37.494 [error] <0.307.0> gen_server <0.307.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37.493 [error] <0.316.0> gen_server <0.316.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37.496 [error] <0.323.0> gen_server <0.323.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37.521 [error] <0.316.0> CRASH REPORT Process <0.316.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:37:37.522 [error] <0.323.0> CRASH REPORT Process <0.323.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:37:37.521 [error] <0.315.0> Supervisor {<0.315.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49480 -> 127.0.0.1:5672">>,1}) at <0.316.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:37:37.523 [error] <0.307.0> CRASH REPORT Process <0.307.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:37:37.522 [error] <0.315.0> Supervisor {<0.315.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49480 -> 127.0.0.1:5672">>,1}) at <0.316.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:37:37.523 [error] <0.322.0> Supervisor {<0.322.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49500 -> 127.0.0.1:5672">>,1}) at <0.323.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:37:37.523 [error] <0.322.0> Supervisor {<0.322.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49500 -> 127.0.0.1:5672">>,1}) at <0.323.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:37:37.523 [error] <0.306.0> Supervisor {<0.306.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49498 -> 127.0.0.1:5672">>,1}) at <0.307.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:37:37.523 [error] <0.306.0> Supervisor {<0.306.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49498 -> 127.0.0.1:5672">>,1}) at <0.307.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:43:38.021 [info] <0.317.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,77,121,73,90,79,112,80,87,81,48,49,104,112,89,97,73,121,73,121,122,112,103,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.021 [info] <0.317.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.021 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,120,114,109,107,83,68,83,84,80,101,51,52,80,68,66,51,112,71,77,107,103,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.021 [info] <0.317.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:43:38.022 [info] <0.317.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,77,121,73,90,79,112,80,87,81,48,49,104,112,89,97,73,121,73,121,122,112,103,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.022 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.022 [info] <0.301.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:43:38.022 [info] <0.317.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.022 [info] <0.317.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:43:38.023 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.023 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:43:38.023 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:46:28.603 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,120,114,109,107,83,68,83,84,80,101,51,52,80,68,66,51,112,71,77,107,103,0,0,0,0,0,0,0,5,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.603 [error] <0.353.0> gen_server <0.353.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:46:28.603 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.603 [error] <0.353.0> CRASH REPORT Process <0.353.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:46:28.603 [error] <0.352.0> Supervisor {<0.352.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49506 -> 127.0.0.1:5672">>,1}) at <0.353.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:46:28.604 [error] <0.352.0> Supervisor {<0.352.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49506 -> 127.0.0.1:5672">>,1}) at <0.353.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:46:28.601 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,5,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.604 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.605 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:46:28.604 [info] <0.301.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:46:28.604 [info] <0.317.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,77,121,73,90,79,112,80,87,81,48,49,104,112,89,97,73,121,73,121,122,112,103,0,0,0,0,0,0,0,5,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.604 [info] <0.317.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:46:28.604 [info] <0.317.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:47:32.410 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,6,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.414 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.414 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:47:32.409 [info] <0.317.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,77,121,73,90,79,112,80,87,81,48,49,104,112,89,97,73,121,73,121,122,112,103,0,0,0,0,0,0,0,6,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.317.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,120,114,109,107,83,68,83,84,80,101,51,52,80,68,66,51,112,71,77,107,103,0,0,0,0,0,0,0,6,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.301.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.317.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.347.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,99,50,122,118,102,76,72,56,72,122,118,68,122,76,112,102,88,69,73,57,65,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.411 [info] <0.347.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:47:32.412 [info] <0.347.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:50:36.960 [error] <0.393.0> gen_server <0.393.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:50:36.960 [error] <0.393.0> CRASH REPORT Process <0.393.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:50:36.960 [error] <0.392.0> Supervisor {<0.392.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49514 -> 127.0.0.1:5672">>,1}) at <0.393.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:50:36.960 [error] <0.392.0> Supervisor {<0.392.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49514 -> 127.0.0.1:5672">>,1}) at <0.393.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:50:36.963 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,7,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.965 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.965 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:50:36.968 [info] <0.347.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,99,50,122,118,102,76,72,56,72,122,118,68,122,76,112,102,88,69,73,57,65,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.968 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,120,114,109,107,83,68,83,84,80,101,51,52,80,68,66,51,112,71,77,107,103,0,0,0,0,0,0,0,7,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.969 [info] <0.347.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.969 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:50:36.969 [info] <0.347.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:50:36.969 [info] <0.301.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:53:03.256 [info] <0.387.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,112,111,108,69,118,121,117,51,97,88,105,97,86,79,106,55,73,108,48,102,49,103,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:53:03.256 [error] <0.379.0> gen_server <0.379.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:03.257 [error] <0.379.0> CRASH REPORT Process <0.379.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:53:03.257 [info] <0.387.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:53:03.257 [error] <0.378.0> Supervisor {<0.378.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49510 -> 127.0.0.1:5672">>,1}) at <0.379.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:53:03.257 [error] <0.378.0> Supervisor {<0.378.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49510 -> 127.0.0.1:5672">>,1}) at <0.379.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:53:03.257 [error] <0.432.0> gen_server <0.432.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:03.257 [info] <0.387.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:53:03.258 [error] <0.432.0> CRASH REPORT Process <0.432.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:53:03.258 [info] <0.317.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,77,121,73,90,79,112,80,87,81,48,49,104,112,89,97,73,121,73,121,122,112,103,0,0,0,0,0,0,0,7,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:53:03.258 [error] <0.431.0> Supervisor {<0.431.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49520 -> 127.0.0.1:5672">>,1}) at <0.432.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:53:03.258 [info] <0.317.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:53:03.258 [error] <0.431.0> Supervisor {<0.431.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49520 -> 127.0.0.1:5672">>,1}) at <0.432.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:53:03.258 [info] <0.317.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:53:23.977 [error] <0.418.0> gen_server <0.418.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:23.978 [error] <0.418.0> CRASH REPORT Process <0.418.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:53:23.979 [error] <0.417.0> Supervisor {<0.417.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49516 -> 127.0.0.1:5672">>,1}) at <0.418.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:53:23.979 [error] <0.417.0> Supervisor {<0.417.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49516 -> 127.0.0.1:5672">>,1}) at <0.418.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:53:23.981 [info] <0.301.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,120,114,109,107,83,68,83,84,80,101,51,52,80,68,66,51,112,71,77,107,103,0,0,0,0,0,0,0,8,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.981 [info] <0.347.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,87,99,50,122,118,102,76,72,56,72,122,118,68,122,76,112,102,88,69,73,57,65,0,0,0,0,0,0,0,5,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.981 [error] <0.471.0> gen_server <0.471.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:23.982 [info] <0.301.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.982 [info] <0.347.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.982 [info] <0.301.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:53:23.982 [error] <0.471.0> CRASH REPORT Process <0.471.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 11:53:23.982 [info] <0.347.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:53:23.982 [error] <0.470.0> Supervisor {<0.470.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49526 -> 127.0.0.1:5672">>,1}) at <0.471.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 11:53:23.982 [error] <0.470.0> Supervisor {<0.470.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49526 -> 127.0.0.1:5672">>,1}) at <0.471.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 11:53:23.979 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,8,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.980 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:53:23.980 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:55:43.516 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:55:43.526 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:55:43.540 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:55:43.541 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:55:43.541 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:55:43.541 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:55:43.691 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:55:43.691 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:55:43.717 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:55:43.728 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:55:43.729 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:55:45.898 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 11:55:45.907 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 11:55:45.927 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 11:55:45.927 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 11:55:45.928 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 11:55:45.928 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 11:55:46.092 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 11:55:46.092 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 11:55:46.117 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 11:55:46.130 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 11:55:46.130 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 11:57:40.205 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,9,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:57:40.213 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:57:40.213 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:57:40.213 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,10,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:57:40.213 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:57:40.213 [info] <0.310.0> Dropping frame {content_body,<<"hello orders">>} for invalid or closed channel number 1
+2022-05-13 11:57:56.128 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,11,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:57:56.128 [info] <0.310.0> Dropping frame {content_header,60,0,11,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:57:56.128 [info] <0.310.0> Dropping frame {content_body,<<"hello other">>} for invalid or closed channel number 1
+2022-05-13 11:58:09.983 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,12,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:58:09.985 [info] <0.310.0> Dropping frame {content_header,60,0,11,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:58:09.985 [info] <0.310.0> Dropping frame {content_body,<<"hello other">>} for invalid or closed channel number 1
+2022-05-13 11:58:24.735 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,13,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:58:24.735 [info] <0.310.0> Dropping frame {content_header,60,0,5,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:58:24.736 [info] <0.310.0> Dropping frame {content_body,<<"hello">>} for invalid or closed channel number 1
+2022-05-13 11:59:21.777 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,14,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.778 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.778 [info] <0.310.0> Dropping frame {content_body,<<"hello_police">>} for invalid or closed channel number 1
+2022-05-13 11:59:21.788 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,15,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.788 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.788 [info] <0.310.0> Dropping frame {content_body,<<"hello_police">>} for invalid or closed channel number 1
+2022-05-13 11:59:21.800 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,16,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.800 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 11:59:21.801 [info] <0.310.0> Dropping frame {content_body,<<"hello_police">>} for invalid or closed channel number 1
+2022-05-13 12:00:08.834 [error] <0.1216.0>@amqp_channel:handle_call:384 gen_server <0.1216.0> terminated with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]}, {state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,...},...}) line 384
+2022-05-13 12:00:08.871 [error] <0.1216.0>@amqp_channel:handle_call:384 CRASH REPORT Process <0.1216.0> with 0 neighbours crashed with reason: no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]}, {state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,...},...}) line 384
+2022-05-13 12:00:08.872 [error] <0.1214.0>@amqp_channel:handle_call:384 Supervisor {<0.1214.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.1207.0>, 1, <0.1215.0>, {<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,1}) at <0.1216.0> exit with reason no function clause matching amqp_channel:handle_call({command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}, {<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]}, {state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,...},...}) line 384 in context child_terminated
+2022-05-13 12:00:08.872 [error] <0.1214.0> Supervisor {<0.1214.0>,amqp_channel_sup} had child channel started with amqp_channel:start_link(network, <0.1207.0>, 1, <0.1215.0>, {<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,1}) at <0.1216.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:08.872 [warning] <0.1207.0> Connection (<0.1207.0>) closing: internal error in channel (<0.1216.0>): {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},{state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:00:08.873 [error] <0.1207.0> gen_server <0.1207.0> terminated with reason: {channel0_died,method_field_shortstr_overflow}
+2022-05-13 12:00:08.882 [error] <0.1207.0> CRASH REPORT Process <0.1207.0> with 0 neighbours exited with reason: {channel0_died,method_field_shortstr_overflow} in gen_server:handle_common_reply/8 line 811
+2022-05-13 12:00:08.882 [error] <0.1205.0> Supervisor {<0.1205.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.1206.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.1207.0> exit with reason {channel0_died,method_field_shortstr_overflow} in context child_terminated
+2022-05-13 12:00:08.884 [error] <0.1205.0> Supervisor {<0.1205.0>,amqp_connection_sup} had child connection started with amqp_gen_connection:start_link(<0.1206.0>, {amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,...}) at <0.1207.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.416 [error] <0.529.0> gen_server <0.529.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56.418 [error] <0.316.0> gen_server <0.316.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56.419 [error] <0.415.0> gen_server <0.415.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56.419 [error] <0.501.0> gen_server <0.501.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56.419 [error] <0.515.0> gen_server <0.515.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56.424 [error] <0.515.0> CRASH REPORT Process <0.515.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:00:56.424 [error] <0.529.0> CRASH REPORT Process <0.529.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:00:56.425 [error] <0.514.0> Supervisor {<0.514.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49584 -> 127.0.0.1:5672">>,1}) at <0.515.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:00:56.430 [error] <0.514.0> Supervisor {<0.514.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49584 -> 127.0.0.1:5672">>,1}) at <0.515.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.430 [error] <0.316.0> CRASH REPORT Process <0.316.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:00:56.430 [error] <0.415.0> CRASH REPORT Process <0.415.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:00:56.430 [error] <0.528.0> Supervisor {<0.528.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49586 -> 127.0.0.1:5672">>,1}) at <0.529.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:00:56.431 [error] <0.528.0> Supervisor {<0.528.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49586 -> 127.0.0.1:5672">>,1}) at <0.529.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.431 [error] <0.501.0> CRASH REPORT Process <0.501.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:00:56.431 [error] <0.500.0> Supervisor {<0.500.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49582 -> 127.0.0.1:5672">>,1}) at <0.501.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:00:56.431 [error] <0.500.0> Supervisor {<0.500.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49582 -> 127.0.0.1:5672">>,1}) at <0.501.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.431 [error] <0.315.0> Supervisor {<0.315.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49540 -> 127.0.0.1:5672">>,1}) at <0.316.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:00:56.431 [error] <0.315.0> Supervisor {<0.315.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49540 -> 127.0.0.1:5672">>,1}) at <0.316.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.431 [error] <0.414.0> Supervisor {<0.414.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49564 -> 127.0.0.1:5672">>,1}) at <0.415.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:00:56.431 [error] <0.414.0> Supervisor {<0.414.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49564 -> 127.0.0.1:5672">>,1}) at <0.415.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:00:56.432 [error] <0.317.0> gen_server <0.317.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.316.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-hApnOLsmxDOEgpQe4qTYcg">>,8,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:01:24.638 [error] <0.543.0> gen_server <0.543.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24.639 [error] <0.543.0> CRASH REPORT Process <0.543.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:01:24.639 [error] <0.542.0> Supervisor {<0.542.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49588 -> 127.0.0.1:5672">>,1}) at <0.543.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:01:24.640 [error] <0.542.0> Supervisor {<0.542.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49588 -> 127.0.0.1:5672">>,1}) at <0.543.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:01:24.644 [error] <0.557.0> gen_server <0.557.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24.644 [error] <0.345.0> gen_server <0.345.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24.644 [error] <0.345.0> CRASH REPORT Process <0.345.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:01:24.645 [error] <0.344.0> Supervisor {<0.344.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49550 -> 127.0.0.1:5672">>,1}) at <0.345.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:01:24.645 [error] <0.344.0> Supervisor {<0.344.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49550 -> 127.0.0.1:5672">>,1}) at <0.345.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:01:24.645 [error] <0.330.0> gen_server <0.330.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24.645 [error] <0.330.0> CRASH REPORT Process <0.330.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:01:24.646 [error] <0.329.0> Supervisor {<0.329.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49546 -> 127.0.0.1:5672">>,1}) at <0.330.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:01:24.639 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,17,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:01:24.640 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:01:24.640 [info] <0.310.0> Dropping frame {content_body,<<"hello_police">>} for invalid or closed channel number 1
+2022-05-13 12:01:24.646 [error] <0.329.0> Supervisor {<0.329.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49546 -> 127.0.0.1:5672">>,1}) at <0.330.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:01:24.646 [error] <0.331.0> gen_server <0.331.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.330.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-IszBmWCHKfxW3kCqyyPXPQ">>,7,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:01:24.646 [error] <0.557.0> CRASH REPORT Process <0.557.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:01:24.648 [error] <0.556.0> Supervisor {<0.556.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49590 -> 127.0.0.1:5672">>,1}) at <0.557.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:01:24.648 [error] <0.556.0> Supervisor {<0.556.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49590 -> 127.0.0.1:5672">>,1}) at <0.557.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:01:24.648 [error] <0.558.0> gen_server <0.558.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.557.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-kME0TGQErPSOcKNgH0T7hg">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:16:54.776 [error] <0.457.0> gen_server <0.457.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54.776 [error] <0.443.0> gen_server <0.443.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54.776 [error] <0.429.0> gen_server <0.429.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54.776 [error] <0.457.0> CRASH REPORT Process <0.457.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:16:54.776 [error] <0.429.0> CRASH REPORT Process <0.429.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:16:54.777 [error] <0.456.0> Supervisor {<0.456.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49574 -> 127.0.0.1:5672">>,1}) at <0.457.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:16:54.777 [error] <0.456.0> Supervisor {<0.456.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49574 -> 127.0.0.1:5672">>,1}) at <0.457.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:16:54.777 [error] <0.428.0> Supervisor {<0.428.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49568 -> 127.0.0.1:5672">>,1}) at <0.429.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:16:54.777 [error] <0.471.0> gen_server <0.471.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54.779 [error] <0.428.0> Supervisor {<0.428.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49568 -> 127.0.0.1:5672">>,1}) at <0.429.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:16:54.779 [error] <0.471.0> CRASH REPORT Process <0.471.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:16:54.783 [error] <0.470.0> Supervisor {<0.470.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49576 -> 127.0.0.1:5672">>,1}) at <0.471.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:16:54.785 [error] <0.470.0> Supervisor {<0.470.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49576 -> 127.0.0.1:5672">>,1}) at <0.471.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:16:54.785 [error] <0.359.0> gen_server <0.359.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54.785 [error] <0.359.0> CRASH REPORT Process <0.359.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:16:54.786 [error] <0.358.0> Supervisor {<0.358.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49552 -> 127.0.0.1:5672">>,1}) at <0.359.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:16:54.786 [error] <0.358.0> Supervisor {<0.358.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49552 -> 127.0.0.1:5672">>,1}) at <0.359.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:16:54.786 [error] <0.443.0> CRASH REPORT Process <0.443.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:16:54.786 [error] <0.442.0> Supervisor {<0.442.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49572 -> 127.0.0.1:5672">>,1}) at <0.443.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:16:54.786 [error] <0.442.0> Supervisor {<0.442.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49572 -> 127.0.0.1:5672">>,1}) at <0.443.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.961 [error] <0.387.0> gen_server <0.387.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50.961 [error] <0.373.0> gen_server <0.373.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50.961 [error] <0.387.0> CRASH REPORT Process <0.387.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:22:50.961 [error] <0.487.0> gen_server <0.487.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50.961 [error] <0.373.0> CRASH REPORT Process <0.373.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:22:50.961 [error] <0.487.0> CRASH REPORT Process <0.487.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:22:50.961 [error] <0.401.0> gen_server <0.401.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50.962 [error] <0.372.0> Supervisor {<0.372.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49556 -> 127.0.0.1:5672">>,1}) at <0.373.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:22:50.962 [error] <0.401.0> CRASH REPORT Process <0.401.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:22:50.962 [error] <0.372.0> Supervisor {<0.372.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49556 -> 127.0.0.1:5672">>,1}) at <0.373.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.963 [error] <0.386.0> Supervisor {<0.386.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49560 -> 127.0.0.1:5672">>,1}) at <0.387.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:22:50.963 [error] <0.374.0> gen_server <0.374.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.373.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-9ba8F6UzoVDVI1BXnv2P5A">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:22:50.963 [error] <0.386.0> Supervisor {<0.386.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49560 -> 127.0.0.1:5672">>,1}) at <0.387.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.963 [error] <0.486.0> Supervisor {<0.486.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49578 -> 127.0.0.1:5672">>,1}) at <0.487.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:22:50.963 [error] <0.400.0> Supervisor {<0.400.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49562 -> 127.0.0.1:5672">>,1}) at <0.401.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:22:50.963 [error] <0.400.0> Supervisor {<0.400.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49562 -> 127.0.0.1:5672">>,1}) at <0.401.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.964 [error] <0.486.0> Supervisor {<0.486.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49578 -> 127.0.0.1:5672">>,1}) at <0.487.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.964 [error] <0.388.0> gen_server <0.388.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.387.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-lEnhwrT-UflGwlRrznrh2g">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:22:50.964 [error] <0.488.0> gen_server <0.488.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.487.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-KBtxxzBzZa0prCCYh8uFtw">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:22:50.964 [error] <0.402.0> gen_server <0.402.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.401.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-EnFbp9BJcDFu3uktiMqwOg">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:22:50.966 [error] <0.584.0> gen_server <0.584.0> terminated with reason: unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50.966 [error] <0.584.0> CRASH REPORT Process <0.584.0> with 0 neighbours exited with reason: unexpected_delivery_and_no_default_consumer in gen_server2:terminate/3 line 1183
+2022-05-13 12:22:50.967 [error] <0.583.0> Supervisor {<0.583.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49596 -> 127.0.0.1:5672">>,1}) at <0.584.0> exit with reason unexpected_delivery_and_no_default_consumer in context child_terminated
+2022-05-13 12:22:50.967 [error] <0.583.0> Supervisor {<0.583.0>,amqp_channel_sup} had child gen_consumer started with amqp_gen_consumer:start_link(amqp_selective_consumer, [], {<<"client 127.0.0.1:49596 -> 127.0.0.1:5672">>,1}) at <0.584.0> exit with reason reached_max_restart_intensity in context shutdown
+2022-05-13 12:22:50.967 [error] <0.585.0> gen_server <0.585.0> terminated with reason: {unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.584.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-ng7Zcae_6habiI9kCD3Vcg">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}} in gen_server2:call/3 line 346
+2022-05-13 12:23:01.501 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:23:01.508 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:23:01.527 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:23:01.527 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:23:01.527 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:23:01.528 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:23:01.672 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:23:01.672 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:23:01.697 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:23:01.707 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:23:01.707 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 12:23:27.529 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:23:27.538 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:23:27.555 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:23:27.555 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:23:27.556 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:23:27.556 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:23:27.725 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:23:27.725 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:23:27.753 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:23:27.763 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:23:27.763 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 12:25:29.665 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,18,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:25:29.665 [info] <0.310.0> Dropping frame {content_header,60,0,4,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:25:29.666 [info] <0.310.0> Dropping frame {content_body,<<"hola">>} for invalid or closed channel number 1
+2022-05-13 12:25:29.666 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,19,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:25:29.666 [info] <0.310.0> Dropping frame {content_header,60,0,4,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:25:29.666 [info] <0.310.0> Dropping frame {content_body,<<"hola">>} for invalid or closed channel number 1
+2022-05-13 12:25:38.989 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,20,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:25:38.991 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:25:38.992 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:25:38.993 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,21,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:25:38.993 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:25:38.993 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:26:37.135 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,22,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.135 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.136 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:26:37.136 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,23,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.136 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.136 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:26:37.136 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,24,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.137 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.137 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:26:37.137 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,25,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.137 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:26:37.137 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:27:12.935 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,26,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.935 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.935 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:27:12.935 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,27,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.935 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.936 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:27:12.936 [info] <0.310.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,70,108,78,74,112,53,76,50,68,67,84,109,54,88,71,88,50,115,105,75,89,65,0,0,0,0,0,0,0,28,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.936 [info] <0.310.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:27:12.936 [info] <0.310.0> Dropping frame {content_body,<<"hola a tidis">>} for invalid or closed channel number 1
+2022-05-13 12:27:54.472 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:27:54.480 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:27:54.496 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:27:54.496 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:27:54.496 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:27:54.496 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:27:54.637 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:27:54.637 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:27:54.660 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:27:54.669 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:27:54.669 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 12:28:36.613 [info] <0.300.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,69,67,104,87,113,50,90,74,111,65,104,95,66,104,67,119,73,90,102,105,108,119,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:29:02.624 [info] <0.328.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,104,87,81,118,97,48,74,105,70,73,52,74,89,80,76,70,72,81,72,67,68,119,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,95,56,71,95,73,98,87,99,66,84,95,45,51,89,66,74,53,71,111,78,85,103,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {content_body,<<"hola payment">>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,95,56,71,95,73,98,87,99,66,84,95,45,51,89,66,74,53,71,111,78,85,103,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {content_header,60,0,12,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:29:26.810 [info] <0.342.0> Dropping frame {content_body,<<"hola payment">>} for invalid or closed channel number 1
+2022-05-13 12:34:30.931 [info] <0.754.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,45,55,70,52,121,65,75,100,45,111,55,78,73,98,77,110,66,82,51,108,80,81,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:30.936 [info] <0.677.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,57,102,109,71,103,107,100,100,84,72,108,49,108,80,67,54,73,56,89,109,52,103,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,6,111,114,100,101,114,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.023 [info] <0.822.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,55,115,45,78,103,48,45,65,51,50,74,75,77,121,77,90,122,87,51,98,75,119,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.024 [info] <0.812.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,117,78,109,103,97,104,88,70,117,115,56,97,87,88,57,115,108,120,111,65,74,103,0,0,0,0,0,0,0,2,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.024 [info] <0.812.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.025 [info] <0.812.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:34:59.025 [info] <0.812.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,117,78,109,103,97,104,88,70,117,115,56,97,87,88,57,115,108,120,111,65,74,103,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.025 [info] <0.812.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.025 [info] <0.812.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:34:59.029 [info] <0.812.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,117,78,109,103,97,104,88,70,117,115,56,97,87,88,57,115,108,120,111,65,74,103,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.031 [info] <0.822.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.032 [info] <0.822.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:34:59.032 [info] <0.822.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,55,115,45,78,103,48,45,65,51,50,74,75,77,121,77,90,122,87,51,98,75,119,0,0,0,0,0,0,0,3,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.034 [info] <0.822.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.034 [info] <0.822.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:34:59.034 [info] <0.822.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,55,115,45,78,103,48,45,65,51,50,74,75,77,121,77,90,122,87,51,98,75,119,0,0,0,0,0,0,0,4,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.035 [info] <0.822.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.035 [info] <0.822.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:34:59.035 [info] <0.822.0> Dropping frame {method,'basic.deliver',<<31,97,109,113,46,99,116,97,103,45,55,115,45,78,103,48,45,65,51,50,74,75,77,121,77,90,122,87,51,98,75,119,0,0,0,0,0,0,0,5,0,6,98,117,110,115,97,110,8,112,97,121,109,101,110,116,115>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.035 [info] <0.822.0> Dropping frame {content_header,60,0,15,<<16,0,1>>} for invalid or closed channel number 1
+2022-05-13 12:34:59.035 [info] <0.822.0> Dropping frame {content_body,<<"hola a payments">>} for invalid or closed channel number 1
+2022-05-13 12:36:39.630 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:36:39.638 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:36:39.651 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:36:39.651 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:36:39.651 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:36:39.651 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:36:39.807 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:36:39.808 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:36:39.831 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:36:39.839 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:36:39.840 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 12:36:47.113 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:36:47.121 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:36:47.134 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:36:47.134 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:36:47.135 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:36:47.135 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:36:47.282 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:36:47.282 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:36:47.306 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:36:47.314 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:36:47.315 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost
+2022-05-13 12:36:50.224 [info] <0.44.0> Application lager started on node nonode@nohost
+2022-05-13 12:36:50.233 [info] <0.44.0> Application xmerl started on node nonode@nohost
+2022-05-13 12:36:50.257 [info] <0.44.0> Application sasl started on node nonode@nohost
+2022-05-13 12:36:50.257 [info] <0.44.0> Application tools started on node nonode@nohost
+2022-05-13 12:36:50.257 [info] <0.44.0> Application jsx started on node nonode@nohost
+2022-05-13 12:36:50.258 [info] <0.44.0> Application recon started on node nonode@nohost
+2022-05-13 12:36:50.395 [info] <0.44.0> Application credentials_obfuscation started on node nonode@nohost
+2022-05-13 12:36:50.395 [info] <0.44.0> Application rabbit_common started on node nonode@nohost
+2022-05-13 12:36:50.418 [info] <0.44.0> Application amqp_client started on node nonode@nohost
+2022-05-13 12:36:50.428 [info] <0.44.0> Application amqp started on node nonode@nohost
+2022-05-13 12:36:50.428 [info] <0.44.0> Application rabbitmq_tutorials started on node nonode@nohost

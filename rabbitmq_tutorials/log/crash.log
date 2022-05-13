@@ -1,313 +1,1145 @@
-2022-05-12 18:44:08 =CRASH REPORT====
+2022-05-13 11:30:45 =ERROR REPORT====
+** Generic server <0.307.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-dlVJ0yOEbCMBPTzdx8wSsw">>,5,false,<<"bunsan">>,<<"payments">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"alo_payments">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:30:45 =CRASH REPORT====
   crasher:
-    initial call: rabbit_writer:enter_mainloop/2
-    pid: <0.523.0>
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.307.0>
     registered_name: []
-    exception error: bad argument: [{erlang,size,[#{consumer_count => 0,message_count => 3,queue => <<"payments">>}],[{error_info,#{module => erl_erts_errors}}]},{rabbit_framing_amqp_0_9_1,shortstr_size,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,178}]},{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,959}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]}]
-    ancestors: [<0.520.0>,<0.514.0>,<0.512.0>,<0.511.0>,amqp_sup,<0.297.0>]
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.306.0>,<0.300.0>,<0.296.0>,<0.295.0>,amqp_sup,<0.281.0>]
     message_queue_len: 0
     messages: []
-    links: [<0.520.0>]
-    dictionary: [{process_name,{rabbit_writer,{<<"client 127.0.0.1:49264 -> 127.0.0.1:5672">>,1}}}]
+    links: [<0.306.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49482 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 4565
+  neighbours:
+2022-05-13 11:30:45 =SUPERVISOR REPORT====
+     Supervisor: {<0.306.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.307.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49482 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:30:45 =SUPERVISOR REPORT====
+     Supervisor: {<0.306.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.307.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49482 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:33:42 =ERROR REPORT====
+Error in process <0.28747.0> with exit value:
+{undef,[{'Elixir.RabbitMQ.Consumer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
+2022-05-13 11:33:42 =SUPERVISOR REPORT====
+     Supervisor: {<0.121.0>,
+                  'Elixir.ElixirLS.LanguageServer.Dialyzer.Supervisor'}
+     Context:    child_terminated
+     Reason:     {undef,[{'Elixir.RabbitMQ.Consumer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
+     Offender:   [{pid,<0.19732.0>},{id,'Elixir.ElixirLS.LanguageServer.Dialyzer'},{mfargs,{'Elixir.ElixirLS.LanguageServer.Dialyzer',start_link,[{<0.117.0>,<<"/home/tania/Becarios_bunsan/rabbitmq_tutorials">>}]}},{restart_type,permanent},{significant,false},{shutdown,5000},{child_type,worker}]
+
+2022-05-13 11:37:37 =ERROR REPORT====
+** Generic server <0.316.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-FlNJp5L2DCTm6XGX2siKYA">>,2,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37 =ERROR REPORT====
+** Generic server <0.307.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-WxrmkSDSTPe34PDB3pGMkg">>,2,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37 =ERROR REPORT====
+** Generic server <0.323.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-MyIZOpPWQ01hpYaIyIyzpg">>,2,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:37:37 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.316.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.315.0>,<0.309.0>,<0.305.0>,<0.304.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.315.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49480 -> 127.0.0.1:5672">>,1}}}]
     trap_exit: false
     status: running
     heap_size: 2586
     stack_size: 29
-    reductions: 894
+    reductions: 4440
   neighbours:
-2022-05-12 18:44:08 =SUPERVISOR REPORT====
-     Supervisor: {<0.520.0>,amqp_channel_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.315.0>,amqp_channel_sup}
      Context:    child_terminated
-     Reason:     {badarg,[{erlang,size,[#{consumer_count => 0,message_count => 3,queue => <<"payments">>}],[{error_info,#{module => erl_erts_errors}}]},{rabbit_framing_amqp_0_9_1,shortstr_size,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,178}]},{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,959}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]}]}
-     Offender:   [{pid,<0.523.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.14>,1,131072,rabbit_framing_amqp_0_9_1,<0.522.0>,{<<"client 127.0.0.1:49264 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.316.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49480 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 18:44:08 =SUPERVISOR REPORT====
-     Supervisor: {<0.520.0>,amqp_channel_sup}
-     Context:    shutdown
-     Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.523.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.14>,1,131072,rabbit_framing_amqp_0_9_1,<0.522.0>,{<<"client 127.0.0.1:49264 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
-
-2022-05-12 18:58:13 =CRASH REPORT====
+2022-05-13 11:37:37 =CRASH REPORT====
   crasher:
-    initial call: rabbit_writer:enter_mainloop/2
-    pid: <0.612.0>
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.323.0>
     registered_name: []
-    exception error: bad argument: [{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,964}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]
-    ancestors: [<0.609.0>,<0.603.0>,<0.601.0>,<0.600.0>,amqp_sup,<0.297.0>]
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.322.0>,<0.316.0>,<0.314.0>,<0.313.0>,amqp_sup,<0.281.0>]
     message_queue_len: 0
     messages: []
-    links: [<0.609.0>]
-    dictionary: [{process_name,{rabbit_writer,{<<"client 127.0.0.1:49270 -> 127.0.0.1:5672">>,1}}}]
+    links: [<0.322.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49500 -> 127.0.0.1:5672">>,1}}}]
     trap_exit: false
     status: running
     heap_size: 1598
     stack_size: 29
-    reductions: 735
+    reductions: 4257
   neighbours:
-2022-05-12 18:58:13 =SUPERVISOR REPORT====
-     Supervisor: {<0.609.0>,amqp_channel_sup}
-     Context:    child_terminated
-     Reason:     {badarg,[{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,964}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-     Offender:   [{pid,<0.612.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.17>,1,131072,rabbit_framing_amqp_0_9_1,<0.611.0>,{<<"client 127.0.0.1:49270 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
-
-2022-05-12 18:58:13 =SUPERVISOR REPORT====
-     Supervisor: {<0.609.0>,amqp_channel_sup}
-     Context:    shutdown
-     Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.612.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.17>,1,131072,rabbit_framing_amqp_0_9_1,<0.611.0>,{<<"client 127.0.0.1:49270 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
-
-2022-05-12 18:58:30 =CRASH REPORT====
+2022-05-13 11:37:37 =CRASH REPORT====
   crasher:
-    initial call: rabbit_writer:enter_mainloop/2
-    pid: <0.636.0>
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.307.0>
     registered_name: []
-    exception error: bad argument: [{erlang,size,[#{consumer_count => 0,message_count => 3,queue => <<"payments">>}],[{error_info,#{module => erl_erts_errors}}]},{rabbit_framing_amqp_0_9_1,shortstr_size,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,178}]},{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,959}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]}]
-    ancestors: [<0.633.0>,<0.627.0>,<0.625.0>,<0.624.0>,amqp_sup,<0.297.0>]
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.306.0>,<0.300.0>,<0.296.0>,<0.295.0>,amqp_sup,<0.281.0>]
     message_queue_len: 0
     messages: []
-    links: [<0.633.0>]
-    dictionary: [{process_name,{rabbit_writer,{<<"client 127.0.0.1:49272 -> 127.0.0.1:5672">>,1}}}]
+    links: [<0.306.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49498 -> 127.0.0.1:5672">>,1}}}]
     trap_exit: false
     status: running
     heap_size: 2586
     stack_size: 29
-    reductions: 892
+    reductions: 4440
   neighbours:
-2022-05-12 18:58:30 =SUPERVISOR REPORT====
-     Supervisor: {<0.633.0>,amqp_channel_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.322.0>,amqp_channel_sup}
      Context:    child_terminated
-     Reason:     {badarg,[{erlang,size,[#{consumer_count => 0,message_count => 3,queue => <<"payments">>}],[{error_info,#{module => erl_erts_errors}}]},{rabbit_framing_amqp_0_9_1,shortstr_size,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,178}]},{rabbit_framing_amqp_0_9_1,encode_method_fields,1,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_framing_amqp_0_9_1.erl"},{line,959}]},{rabbit_binary_generator,build_simple_method_frame,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_binary_generator.erl"},{line,50}]},{rabbit_writer,internal_send_command_async,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,353}]},{rabbit_writer,handle_message,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,229}]},{rabbit_writer,mainloop1,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,213}]},{rabbit_writer,mainloop,2,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/rabbit_writer.erl"},{line,204}]}]}
-     Offender:   [{pid,<0.636.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.18>,1,131072,rabbit_framing_amqp_0_9_1,<0.635.0>,{<<"client 127.0.0.1:49272 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.323.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49500 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 18:58:30 =SUPERVISOR REPORT====
-     Supervisor: {<0.633.0>,amqp_channel_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.322.0>,amqp_channel_sup}
      Context:    shutdown
      Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.636.0>},{id,writer},{mfargs,{rabbit_writer,start_link,[#Port<0.18>,1,131072,rabbit_framing_amqp_0_9_1,<0.635.0>,{<<"client 127.0.0.1:49272 -> 127.0.0.1:5672">>,1},false,1000000000]}},{restart_type,transient},{shutdown,300000},{child_type,worker}]
+     Offender:   [{pid,<0.323.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49500 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:45:55 =ERROR REPORT====
-** Generic server <0.322.0> terminating 
-** Last message in was {command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}
-** When Server state == {state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
-** Reason for termination ==
-** {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},{state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-** Client <0.305.0> stacktrace
-** [{gen,do_call,4,[{file,"gen.erl"},{line,233}]},{gen_server,call,3,[{file,"gen_server.erl"},{line,243}]},{'Elixir.AMQP.Connection',close,1,[{file,"lib/amqp/connection.ex"},{line,229}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,685}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,296}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,274}]},{'Elixir.IEx.Evaluator',handle_eval,3,[{file,"lib/iex/evaluator.ex"},{line,310}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,285}]}]
-2022-05-12 21:45:55 =CRASH REPORT====
-  crasher:
-    initial call: amqp_channel:init/1
-    pid: <0.322.0>
-    registered_name: []
-    exception error: {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},{state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.320.0>,<0.314.0>,<0.310.0>,<0.309.0>,amqp_sup,<0.297.0>]
-    message_queue_len: 0
-    messages: []
-    links: [<0.320.0>]
-    dictionary: [{process_name,{amqp_channel,{<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,1}}}]
-    trap_exit: false
-    status: running
-    heap_size: 6772
-    stack_size: 29
-    reductions: 11506
-  neighbours:
-2022-05-12 21:45:55 =SUPERVISOR REPORT====
-     Supervisor: {<0.320.0>,amqp_channel_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.306.0>,amqp_channel_sup}
      Context:    child_terminated
-     Reason:     {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},{state,1,<0.311.0>,<0.321.0>,network,{[],[]},false,<0.323.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-     Offender:   [{pid,<0.322.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.311.0>,1,<0.321.0>,{<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.307.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49498 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:45:55 =SUPERVISOR REPORT====
-     Supervisor: {<0.320.0>,amqp_channel_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.315.0>,amqp_channel_sup}
      Context:    shutdown
      Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.322.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.311.0>,1,<0.321.0>,{<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+     Offender:   [{pid,<0.316.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49480 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:45:55 =ERROR REPORT====
-** Generic server <0.311.0> terminating 
-** Last message in was {channel_exit,0,method_field_shortstr_overflow}
-** When Server state == {state,amqp_network_connection,{state,#Port<0.7>,<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>,10,<0.316.0>,131072,<0.310.0>,{internal_error,541,<<"<0.322.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},\n                    {state,1,<0.311.0>,<0.321.0>,network,\n                        {[],[]},\n                        false,<0.323.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>},false},<0.315.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@tania-HP">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.2.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.2">>}],none,{closing,internal_error,{'connection.close',541,<<"<0.322.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235777.20978>]},\n                    {state,1,<0.311.0>,<0.321.0>,network,\n                        {[],[]},\n                        false,<0.323.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>,0,0},none}}
-** Reason for termination ==
-** {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:45:55 =CRASH REPORT====
-  crasher:
-    initial call: amqp_gen_connection:init/1
-    pid: <0.311.0>
-    registered_name: []
-    exception exit: {{channel0_died,method_field_shortstr_overflow},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,811}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.309.0>,amqp_sup,<0.297.0>]
-    message_queue_len: 0
-    messages: []
-    links: [<0.309.0>]
-    dictionary: [{process_name,{amqp_gen_connection,<<"client 127.0.0.1:49344 -> 127.0.0.1:5672">>}},{gen_server_call_timeout,70000}]
-    trap_exit: true
-    status: running
-    heap_size: 6772
-    stack_size: 29
-    reductions: 56974
-  neighbours:
-2022-05-12 21:45:55 =SUPERVISOR REPORT====
-     Supervisor: {<0.309.0>,amqp_connection_sup}
-     Context:    child_terminated
-     Reason:     {channel0_died,method_field_shortstr_overflow}
-     Offender:   [{pid,<0.311.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.310.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
-
-2022-05-12 21:45:55 =SUPERVISOR REPORT====
-     Supervisor: {<0.309.0>,amqp_connection_sup}
+2022-05-13 11:37:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.306.0>,amqp_channel_sup}
      Context:    shutdown
      Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.311.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.310.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+     Offender:   [{pid,<0.307.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49498 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:46:20 =ERROR REPORT====
-** Generic server <0.337.0> terminating 
-** Last message in was {command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}
-** When Server state == {state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
-** Reason for termination ==
-** {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},{state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-** Client <0.305.0> stacktrace
-** [{gen,do_call,4,[{file,"gen.erl"},{line,233}]},{gen_server,call,3,[{file,"gen_server.erl"},{line,243}]},{'Elixir.AMQP.Connection',close,1,[{file,"lib/amqp/connection.ex"},{line,229}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,685}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,296}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,274}]},{'Elixir.IEx.Evaluator',handle_eval,3,[{file,"lib/iex/evaluator.ex"},{line,310}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,285}]}]
-2022-05-12 21:46:20 =CRASH REPORT====
+2022-05-13 11:46:28 =ERROR REPORT====
+** Generic server <0.353.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-Wc2zvfLH8HzvDzLpfXEI9A">>,2,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:46:28 =CRASH REPORT====
   crasher:
-    initial call: amqp_channel:init/1
-    pid: <0.337.0>
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.353.0>
     registered_name: []
-    exception error: {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},{state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.335.0>,<0.329.0>,<0.327.0>,<0.326.0>,amqp_sup,<0.297.0>]
-    message_queue_len: 0
-    messages: []
-    links: [<0.335.0>]
-    dictionary: [{process_name,{amqp_channel,{<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,1}}}]
-    trap_exit: false
-    status: running
-    heap_size: 10958
-    stack_size: 29
-    reductions: 10791
-  neighbours:
-2022-05-12 21:46:20 =SUPERVISOR REPORT====
-     Supervisor: {<0.335.0>,amqp_channel_sup}
-     Context:    child_terminated
-     Reason:     {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},{state,1,<0.328.0>,<0.336.0>,network,{[],[]},false,<0.338.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-     Offender:   [{pid,<0.337.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.328.0>,1,<0.336.0>,{<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
-
-2022-05-12 21:46:20 =SUPERVISOR REPORT====
-     Supervisor: {<0.335.0>,amqp_channel_sup}
-     Context:    shutdown
-     Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.337.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.328.0>,1,<0.336.0>,{<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
-
-2022-05-12 21:46:20 =ERROR REPORT====
-** Generic server <0.328.0> terminating 
-** Last message in was {channel_exit,0,method_field_shortstr_overflow}
-** When Server state == {state,amqp_network_connection,{state,#Port<0.8>,<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>,10,<0.331.0>,131072,<0.327.0>,{internal_error,541,<<"<0.337.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},\n                    {state,1,<0.328.0>,<0.336.0>,network,\n                        {[],[]},\n                        false,<0.338.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>},false},<0.330.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@tania-HP">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.2.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.2">>}],none,{closing,internal_error,{'connection.close',541,<<"<0.337.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235778.21216>]},\n                    {state,1,<0.328.0>,<0.336.0>,network,\n                        {[],[]},\n                        false,<0.338.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>,0,0},none}}
-** Reason for termination ==
-** {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:46:20 =CRASH REPORT====
-  crasher:
-    initial call: amqp_gen_connection:init/1
-    pid: <0.328.0>
-    registered_name: []
-    exception exit: {{channel0_died,method_field_shortstr_overflow},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,811}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.326.0>,amqp_sup,<0.297.0>]
-    message_queue_len: 0
-    messages: []
-    links: [<0.326.0>]
-    dictionary: [{process_name,{amqp_gen_connection,<<"client 127.0.0.1:49346 -> 127.0.0.1:5672">>}},{gen_server_call_timeout,70000}]
-    trap_exit: true
-    status: running
-    heap_size: 6772
-    stack_size: 29
-    reductions: 56618
-  neighbours:
-2022-05-12 21:46:20 =SUPERVISOR REPORT====
-     Supervisor: {<0.326.0>,amqp_connection_sup}
-     Context:    child_terminated
-     Reason:     {channel0_died,method_field_shortstr_overflow}
-     Offender:   [{pid,<0.328.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.327.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
-
-2022-05-12 21:46:20 =SUPERVISOR REPORT====
-     Supervisor: {<0.326.0>,amqp_connection_sup}
-     Context:    shutdown
-     Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.328.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.327.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
-
-2022-05-12 21:46:43 =ERROR REPORT====
-Error in process <0.19661.0> with exit value:
-{undef,[{'Elixir.RabbitMQ.Producer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
-2022-05-12 21:46:43 =SUPERVISOR REPORT====
-     Supervisor: {<0.121.0>,
-                  'Elixir.ElixirLS.LanguageServer.Dialyzer.Supervisor'}
-     Context:    child_terminated
-     Reason:     {undef,[{'Elixir.RabbitMQ.Producer',module_info,[compile],[]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',resolve_module_file,2,[{file,"lib/language_server/dialyzer.ex"},{line,440}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-add_warnings/2-fun-0-',2,[{file,"lib/language_server/dialyzer.ex"},{line,422}]},{'Elixir.Enum','-reduce/3-lists^foldl/2-0-',3,[{file,"lib/enum.ex"},{line,2396}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',add_warnings,2,[{file,"lib/language_server/dialyzer.ex"},{line,417}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer','-compile/2-fun-6-',7,[{file,"lib/language_server/dialyzer.ex"},{line,387}]},{timer,tc,1,[{file,"timer.erl"},{line,166}]},{'Elixir.ElixirLS.LanguageServer.Dialyzer',compile,2,[{file,"lib/language_server/dialyzer.ex"},{line,324}]}]}
-     Offender:   [{pid,<0.122.0>},{id,'Elixir.ElixirLS.LanguageServer.Dialyzer'},{mfargs,{'Elixir.ElixirLS.LanguageServer.Dialyzer',start_link,[{<0.117.0>,<<"/home/tania/Becarios_bunsan/rabbitmq_tutorials">>}]}},{restart_type,permanent},{significant,false},{shutdown,5000},{child_type,worker}]
-
-2022-05-12 21:49:00 =ERROR REPORT====
-** Generic server <0.354.0> terminating 
-** Last message in was {command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}
-** When Server state == {state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
-** Reason for termination ==
-** {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},{state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-** Client <0.305.0> stacktrace
-** [{gen,do_call,4,[{file,"gen.erl"},{line,233}]},{gen_server,call,3,[{file,"gen_server.erl"},{line,243}]},{'Elixir.AMQP.Connection',close,1,[{file,"lib/amqp/connection.ex"},{line,229}]},{erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,685}]},{elixir,recur_eval,3,[{file,"src/elixir.erl"},{line,296}]},{elixir,eval_forms,3,[{file,"src/elixir.erl"},{line,274}]},{'Elixir.IEx.Evaluator',handle_eval,3,[{file,"lib/iex/evaluator.ex"},{line,310}]},{'Elixir.IEx.Evaluator',do_eval,3,[{file,"lib/iex/evaluator.ex"},{line,285}]}]
-2022-05-12 21:49:00 =CRASH REPORT====
-  crasher:
-    initial call: amqp_channel:init/1
-    pid: <0.354.0>
-    registered_name: []
-    exception error: {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},{state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.352.0>,<0.346.0>,<0.344.0>,<0.343.0>,amqp_sup,<0.297.0>]
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.352.0>,<0.346.0>,<0.344.0>,<0.342.0>,amqp_sup,<0.281.0>]
     message_queue_len: 0
     messages: []
     links: [<0.352.0>]
-    dictionary: [{process_name,{amqp_channel,{<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,1}}}]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49506 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4157
+  neighbours:
+2022-05-13 11:46:28 =SUPERVISOR REPORT====
+     Supervisor: {<0.352.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.353.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49506 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:46:28 =SUPERVISOR REPORT====
+     Supervisor: {<0.352.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.353.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49506 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:50:36 =ERROR REPORT====
+** Generic server <0.393.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-polEvyu3aXiaVOj7Il0f1g">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:50:36 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.393.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.392.0>,<0.386.0>,<0.384.0>,<0.383.0>,amqp_sup,<0.281.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.392.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49514 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4086
+  neighbours:
+2022-05-13 11:50:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.392.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.393.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49514 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:50:36 =SUPERVISOR REPORT====
+     Supervisor: {<0.392.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.393.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49514 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:03 =ERROR REPORT====
+** Generic server <0.379.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-e4wsD04bmhfvmMRfDE3M6g">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:03 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.379.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.378.0>,<0.372.0>,<0.370.0>,<0.369.0>,amqp_sup,<0.281.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.378.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49510 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4241
+  neighbours:
+2022-05-13 11:53:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.378.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.379.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49510 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.378.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.379.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49510 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:03 =ERROR REPORT====
+** Generic server <0.432.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-QSA69IBlWfUW2w6JCmUicw">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:03 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.432.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.431.0>,<0.425.0>,<0.423.0>,<0.422.0>,amqp_sup,<0.281.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.431.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49520 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4086
+  neighbours:
+2022-05-13 11:53:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.431.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.432.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49520 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.431.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.432.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49520 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:23 =ERROR REPORT====
+** Generic server <0.418.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-Fqkx8P3HDtXyiRLbKDs-0A">>,2,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:23 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.418.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.417.0>,<0.411.0>,<0.409.0>,<0.408.0>,amqp_sup,<0.281.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.417.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49516 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4165
+  neighbours:
+2022-05-13 11:53:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.417.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.418.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49516 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.417.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.418.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49516 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:23 =ERROR REPORT====
+** Generic server <0.471.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-STHc_BIjqUYlNtqhU5eySg">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello orders">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 11:53:23 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.471.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.470.0>,<0.464.0>,<0.462.0>,<0.461.0>,amqp_sup,<0.281.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.470.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49526 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4078
+  neighbours:
+2022-05-13 11:53:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.470.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.471.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49526 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 11:53:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.470.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.471.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49526 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:08 =ERROR REPORT====
+** Generic server <0.1216.0> terminating 
+** Last message in was {command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}}
+** When Server state == {state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},{state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+** Client <0.302.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,233}]},{gen_server,call,3,[{file,"gen_server.erl"},{line,243}]},{'Elixir.AMQP.Connection',close,1,[{file,"lib/amqp/connection.ex"},{line,229}]},{'Elixir.RabbitMQ.Consumer',wait_for_messages,1,[{file,"lib/rabbitmq_consumer.ex"},{line,25}]}]
+2022-05-13 12:00:08 =CRASH REPORT====
+  crasher:
+    initial call: amqp_channel:init/1
+    pid: <0.1216.0>
+    registered_name: []
+    exception error: {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},{state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.1214.0>,<0.1208.0>,<0.1206.0>,<0.1205.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.1214.0>]
+    dictionary: [{process_name,{amqp_channel,{<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,1}}},{gen_server_call_timeout,70000}]
     trap_exit: false
     status: running
     heap_size: 10958
     stack_size: 29
-    reductions: 10791
+    reductions: 9840
   neighbours:
-2022-05-12 21:49:00 =SUPERVISOR REPORT====
-     Supervisor: {<0.352.0>,amqp_channel_sup}
+2022-05-13 12:00:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1214.0>,amqp_channel_sup}
      Context:    child_terminated
-     Reason:     {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},{state,1,<0.345.0>,<0.353.0>,network,{[],[]},false,<0.355.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-     Offender:   [{pid,<0.354.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.345.0>,1,<0.353.0>,{<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+     Reason:     {function_clause,[{amqp_channel,handle_call,[{command,{close,{'connection.close',200,<<"Goodbye">>,0,0},70000}},{<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},{state,1,<0.1207.0>,<0.1215.0>,network,{[],[]},false,<0.1217.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}],[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,384}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,721}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,750}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+     Offender:   [{pid,<0.1216.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.1207.0>,1,<0.1215.0>,{<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:49:00 =SUPERVISOR REPORT====
-     Supervisor: {<0.352.0>,amqp_channel_sup}
+2022-05-13 12:00:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1214.0>,amqp_channel_sup}
      Context:    shutdown
      Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.354.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.345.0>,1,<0.353.0>,{<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+     Offender:   [{pid,<0.1216.0>},{id,channel},{mfargs,{amqp_channel,start_link,[network,<0.1207.0>,1,<0.1215.0>,{<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
 
-2022-05-12 21:49:00 =ERROR REPORT====
-** Generic server <0.345.0> terminating 
+2022-05-13 12:00:08 =ERROR REPORT====
+** Generic server <0.1207.0> terminating 
 ** Last message in was {channel_exit,0,method_field_shortstr_overflow}
-** When Server state == {state,amqp_network_connection,{state,#Port<0.9>,<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>,10,<0.348.0>,131072,<0.344.0>,{internal_error,541,<<"<0.354.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},\n                    {state,1,<0.345.0>,<0.353.0>,network,\n                        {[],[]},\n                        false,<0.355.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>},false},<0.347.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@tania-HP">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.2.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.2">>}],none,{closing,internal_error,{'connection.close',541,<<"<0.354.0>:{function_clause,\n              [{amqp_channel,handle_call,\n                   [{command,\n                        {close,\n                            {'connection.close',200,<<\"Goodbye\">>,0,0},\n                            70000}},\n                    {<0.305.0>,[alias|#Ref<0.3263742885.3004235779.20139>]},\n                    {state,1,<0.345.0>,<0.353.0>,network,\n                        {[],[]},\n                        false,<0.355.0>,none,none,0,true,none,\n                        {0,nil},\n                        {0,nil},\n                        true,false}],\n                   [{file,\n                        \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                    {line,384}]},\n               {gen_server,try_handle_call,4,\n                   [{file,\"gen_server.erl\"},{line,721}]},\n               {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n               {proc_lib,init_p_do_apply,3,\n                   [{file,\"proc_lib.erl\"},{line,226}]}]}">>,0,0},none}}
+** When Server state == {state,amqp_network_connection,{state,#Port<0.71>,<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>,10,<0.1210.0>,131072,<0.1206.0>,{internal_error,541,<<"<0.1216.0>:{function_clause,\n               [{amqp_channel,handle_call,\n                    [{command,\n                         {close,\n                             {'connection.close',200,<<\"Goodbye\">>,0,0},\n                             70000}},\n                     {<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},\n                     {state,1,<0.1207.0>,<0.1215.0>,network,\n                         {[],[]},\n                         false,<0.1217.0>,none,none,0,true,none,\n                         {0,nil},\n                         {0,nil},\n                         true,false}],\n                    [{file,\n                         \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                     {line,384}]},\n                {gen_server,try_handle_call,4,\n                    [{file,\"gen_server.erl\"},{line,721}]},\n                {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n                {proc_lib,init_p_do_apply,3,\n                    [{file,\"proc_lib.erl\"},{line,226}]}]}">>},false},<0.1209.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]},2047,[{<<"capabilities">>,table,[{<<"publisher_confirms">>,bool,true},{<<"exchange_exchange_bindings">>,bool,true},{<<"basic.nack">>,bool,true},{<<"consumer_cancel_notify">>,bool,true},{<<"connection.blocked">>,bool,true},{<<"consumer_priorities">>,bool,true},{<<"authentication_failure_close">>,bool,true},{<<"per_consumer_qos">>,bool,true},{<<"direct_reply_to">>,bool,true}]},{<<"cluster_name">>,longstr,<<"rabbit@tania-HP">>},{<<"copyright">>,longstr,<<"Copyright (c) 2007-2019 Pivotal Software, Inc.">>},{<<"information">>,longstr,<<"Licensed under the MPL 1.1. Website: https://rabbitmq.com">>},{<<"platform">>,longstr,<<"Erlang/OTP 22.2.7">>},{<<"product">>,longstr,<<"RabbitMQ">>},{<<"version">>,longstr,<<"3.8.2">>}],none,{closing,internal_error,{'connection.close',541,<<"<0.1216.0>:{function_clause,\n               [{amqp_channel,handle_call,\n                    [{command,\n                         {close,\n                             {'connection.close',200,<<\"Goodbye\">>,0,0},\n                             70000}},\n                     {<0.302.0>,[alias|#Ref<0.535599331.2598961154.156224>]},\n                     {state,1,<0.1207.0>,<0.1215.0>,network,\n                         {[],[]},\n                         false,<0.1217.0>,none,none,0,true,none,\n                         {0,nil},\n                         {0,nil},\n                         true,false}],\n                    [{file,\n                         \"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl\"},\n                     {line,384}]},\n                {gen_server,try_handle_call,4,\n                    [{file,\"gen_server.erl\"},{line,721}]},\n                {gen_server,handle_msg,6,[{file,\"gen_server.erl\"},{line,750}]},\n                {proc_lib,init_p_do_apply,3,\n                    [{file,\"proc_lib.erl\"},{line,226}]}]}">>,0,0},none}}
 ** Reason for termination ==
 ** {channel0_died,method_field_shortstr_overflow}
-2022-05-12 21:49:00 =CRASH REPORT====
+2022-05-13 12:00:08 =CRASH REPORT====
   crasher:
     initial call: amqp_gen_connection:init/1
-    pid: <0.345.0>
+    pid: <0.1207.0>
     registered_name: []
     exception exit: {{channel0_died,method_field_shortstr_overflow},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,811}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
-    ancestors: [<0.343.0>,amqp_sup,<0.297.0>]
+    ancestors: [<0.1205.0>,amqp_sup,<0.291.0>]
     message_queue_len: 0
     messages: []
-    links: [<0.343.0>]
-    dictionary: [{process_name,{amqp_gen_connection,<<"client 127.0.0.1:49350 -> 127.0.0.1:5672">>}},{gen_server_call_timeout,70000}]
+    links: [<0.1205.0>]
+    dictionary: [{process_name,{amqp_gen_connection,<<"client 127.0.0.1:49690 -> 127.0.0.1:5672">>}},{gen_server_call_timeout,70000}]
     trap_exit: true
     status: running
-    heap_size: 6772
+    heap_size: 2586
     stack_size: 29
-    reductions: 56618
+    reductions: 57920
   neighbours:
-2022-05-12 21:49:00 =SUPERVISOR REPORT====
-     Supervisor: {<0.343.0>,amqp_connection_sup}
+2022-05-13 12:00:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1205.0>,amqp_connection_sup}
      Context:    child_terminated
      Reason:     {channel0_died,method_field_shortstr_overflow}
-     Offender:   [{pid,<0.345.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.344.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+     Offender:   [{pid,<0.1207.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.1206.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
 
-2022-05-12 21:49:00 =SUPERVISOR REPORT====
-     Supervisor: {<0.343.0>,amqp_connection_sup}
+2022-05-13 12:00:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.1205.0>,amqp_connection_sup}
      Context:    shutdown
      Reason:     reached_max_restart_intensity
-     Offender:   [{pid,<0.345.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.344.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
+     Offender:   [{pid,<0.1207.0>},{id,connection},{mfargs,{amqp_gen_connection,start_link,[<0.1206.0>,{amqp_params_network,<<"guest">>,{plaintext,<<"guest">>},<<"/">>,"localhost",5672,0,0,10,50000,none,[fun amqp_auth_mechanisms:plain/3,fun amqp_auth_mechanisms:amqplain/3],[],[]}]}},{restart_type,intrinsic},{shutdown,brutal_kill},{child_type,worker}]
 
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.529.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-kPmkWWhBBJsJnmYg_zrVkQ">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.316.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-hApnOLsmxDOEgpQe4qTYcg">>,8,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.415.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-xeL_F4-FjenDgp1-Opb0wA">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.501.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-HDOrjqUUhxOY0G_1xM5xeA">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.515.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-rn4FGbJTwlDracQ8LV2cTQ">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:00:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.515.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.514.0>,<0.508.0>,<0.506.0>,<0.505.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.514.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49584 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4238
+  neighbours:
+2022-05-13 12:00:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.529.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.528.0>,<0.522.0>,<0.520.0>,<0.519.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.528.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49586 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4238
+  neighbours:
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.514.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.515.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49584 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.514.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.515.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49584 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.316.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.315.0>,<0.309.0>,<0.305.0>,<0.304.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.315.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49540 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 4650
+  neighbours:
+2022-05-13 12:00:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.415.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.414.0>,<0.408.0>,<0.406.0>,<0.405.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.414.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49564 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4292
+  neighbours:
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.528.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.529.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49586 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.528.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.529.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49586 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.501.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.500.0>,<0.494.0>,<0.492.0>,<0.491.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.500.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49582 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4238
+  neighbours:
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.500.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.501.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49582 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.500.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.501.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49582 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.315.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.316.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49540 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.315.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.316.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49540 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.414.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.415.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49564 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =SUPERVISOR REPORT====
+     Supervisor: {<0.414.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.415.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49564 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:00:56 =ERROR REPORT====
+** Generic server <0.317.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-hApnOLsmxDOEgpQe4qTYcg">>,8,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.306.0>,<0.316.0>,network,{[],[]},false,<0.318.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.316.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-hApnOLsmxDOEgpQe4qTYcg">>,8,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.543.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-4wFNBxZ3qbKJG6yCSttxoQ">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.543.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.542.0>,<0.536.0>,<0.534.0>,<0.533.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.542.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49588 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4214
+  neighbours:
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.542.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.543.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49588 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.542.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.543.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49588 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.557.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-kME0TGQErPSOcKNgH0T7hg">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.345.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-qCX_3PyydJ1rbt49hoTcUw">>,6,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.345.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.344.0>,<0.338.0>,<0.336.0>,<0.335.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.344.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49550 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4373
+  neighbours:
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.344.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.345.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49550 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.344.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.345.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49550 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.330.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-IszBmWCHKfxW3kCqyyPXPQ">>,7,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:01:24 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.330.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.329.0>,<0.323.0>,<0.321.0>,<0.320.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49546 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4462
+  neighbours:
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.329.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.330.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49546 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.329.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.330.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49546 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.331.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-IszBmWCHKfxW3kCqyyPXPQ">>,7,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.322.0>,<0.330.0>,network,{[],[]},false,<0.332.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.330.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-IszBmWCHKfxW3kCqyyPXPQ">>,7,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:01:24 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.557.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.556.0>,<0.550.0>,<0.548.0>,<0.547.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.556.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49590 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 29
+    reductions: 4214
+  neighbours:
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.556.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.557.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49590 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =SUPERVISOR REPORT====
+     Supervisor: {<0.556.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.557.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49590 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:01:24 =ERROR REPORT====
+** Generic server <0.558.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-kME0TGQErPSOcKNgH0T7hg">>,3,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.549.0>,<0.557.0>,network,{[],[]},false,<0.559.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.557.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-kME0TGQErPSOcKNgH0T7hg">>,3,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:16:54 =ERROR REPORT====
+** Generic server <0.457.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-Zpo1wLmgKCtWoXQgu_qMKA">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54 =ERROR REPORT====
+** Generic server <0.443.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-ARGfU7OX5NXUaRHKEaWDJg">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54 =ERROR REPORT====
+** Generic server <0.429.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-6zGzTxOWGaF_hT_nTwKyBw">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.457.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.456.0>,<0.450.0>,<0.448.0>,<0.447.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.456.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49574 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4276
+  neighbours:
+2022-05-13 12:16:54 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.429.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.428.0>,<0.422.0>,<0.420.0>,<0.419.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.428.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49568 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4276
+  neighbours:
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.456.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.457.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49574 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.456.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.457.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49574 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.428.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.429.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49568 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =ERROR REPORT====
+** Generic server <0.471.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-CnaJK3r2eG5EGEqMdWgi1A">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.428.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.429.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49568 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.471.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.470.0>,<0.464.0>,<0.462.0>,<0.461.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.470.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49576 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4276
+  neighbours:
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.470.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.471.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49576 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.470.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.471.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49576 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =ERROR REPORT====
+** Generic server <0.359.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-2Q8H8-sok95vx_yJTE4sQA">>,6,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:16:54 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.359.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.358.0>,<0.352.0>,<0.350.0>,<0.349.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.358.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49552 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4378
+  neighbours:
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.358.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.359.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49552 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.358.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.359.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49552 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.443.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.442.0>,<0.436.0>,<0.434.0>,<0.433.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.442.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49572 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4276
+  neighbours:
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.442.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.443.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49572 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:16:54 =SUPERVISOR REPORT====
+     Supervisor: {<0.442.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.443.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49572 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.387.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-lEnhwrT-UflGwlRrznrh2g">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.373.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-9ba8F6UzoVDVI1BXnv2P5A">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.387.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.386.0>,<0.380.0>,<0.378.0>,<0.377.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.386.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49560 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4343
+  neighbours:
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.487.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-KBtxxzBzZa0prCCYh8uFtw">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.373.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.372.0>,<0.366.0>,<0.364.0>,<0.363.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.372.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49556 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4343
+  neighbours:
+2022-05-13 12:22:50 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.487.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.486.0>,<0.480.0>,<0.478.0>,<0.476.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.486.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49578 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 29
+    reductions: 4296
+  neighbours:
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.401.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-EnFbp9BJcDFu3uktiMqwOg">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.372.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.373.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49556 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.401.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.400.0>,<0.394.0>,<0.392.0>,<0.391.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.400.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49562 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4343
+  neighbours:
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.372.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.373.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49556 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.386.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.387.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49560 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.374.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-9ba8F6UzoVDVI1BXnv2P5A">>,5,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.365.0>,<0.373.0>,network,{[],[]},false,<0.375.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.373.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-9ba8F6UzoVDVI1BXnv2P5A">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.386.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.387.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49560 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.486.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.487.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49578 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.400.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.401.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49562 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.400.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.401.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49562 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.486.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.487.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49578 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.388.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-lEnhwrT-UflGwlRrznrh2g">>,5,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.379.0>,<0.387.0>,network,{[],[]},false,<0.389.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.387.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-lEnhwrT-UflGwlRrznrh2g">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.488.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-KBtxxzBzZa0prCCYh8uFtw">>,4,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.479.0>,<0.487.0>,network,{[],[]},false,<0.489.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.487.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-KBtxxzBzZa0prCCYh8uFtw">>,4,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.402.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-EnFbp9BJcDFu3uktiMqwOg">>,5,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.393.0>,<0.401.0>,network,{[],[]},false,<0.403.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.401.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-EnFbp9BJcDFu3uktiMqwOg">>,5,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.584.0> terminating
+** Last message in was {consumer_call,{'basic.deliver',<<"amq.ctag-ng7Zcae_6habiI9kCD3Vcg">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}}
+** When Server state == {state,amqp_selective_consumer,{state,#{},undefined,#{},none}}
+** Reason for termination == 
+** unexpected_delivery_and_no_default_consumer
+2022-05-13 12:22:50 =CRASH REPORT====
+  crasher:
+    initial call: amqp_gen_consumer:init/1
+    pid: <0.584.0>
+    registered_name: []
+    exception exit: {unexpected_delivery_and_no_default_consumer,[{gen_server2,terminate,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,1183}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
+    ancestors: [<0.583.0>,<0.568.0>,<0.562.0>,<0.561.0>,amqp_sup,<0.291.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.583.0>]
+    dictionary: [{process_name,{amqp_gen_consumer,{<<"client 127.0.0.1:49596 -> 127.0.0.1:5672">>,1}}}]
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 29
+    reductions: 4090
+  neighbours:
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.583.0>,amqp_channel_sup}
+     Context:    child_terminated
+     Reason:     unexpected_delivery_and_no_default_consumer
+     Offender:   [{pid,<0.584.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49596 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.583.0>,amqp_channel_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.584.0>},{id,gen_consumer},{mfargs,{amqp_gen_consumer,start_link,[amqp_selective_consumer,[],{<<"client 127.0.0.1:49596 -> 127.0.0.1:5672">>,1}]}},{restart_type,intrinsic},{shutdown,300000},{child_type,worker}]
+
+2022-05-13 12:22:50 =ERROR REPORT====
+** Generic server <0.585.0> terminating 
+** Last message in was {'$gen_cast',{method,{'basic.deliver',<<"amq.ctag-ng7Zcae_6habiI9kCD3Vcg">>,1,false,<<"bunsan">>,<<"orders">>},{content,60,none,<<16,0,1>>,rabbit_framing_amqp_0_9_1,[<<"hello_police">>]},noflow}}
+** When Server state == {state,1,<0.563.0>,<0.584.0>,network,{[],[]},false,<0.586.0>,none,none,0,true,none,{0,nil},{0,nil},true,false}
+** Reason for termination ==
+** {{unexpected_delivery_and_no_default_consumer,{gen_server2,call,[<0.584.0>,{consumer_call,{'basic.deliver',<<"amq.ctag-ng7Zcae_6habiI9kCD3Vcg">>,1,false,<<"bunsan">>,<<"orders">>},{amqp_msg,{'P_basic',undefined,undefined,undefined,1,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined},<<"hello_police">>}},70000]}},[{gen_server2,call,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/rabbit_common/src/gen_server2.erl"},{line,346}]},{amqp_channel,handle_method_from_server1,3,[{file,"/home/tania/Becarios_bunsan/rabbitmq_tutorials/deps/amqp_client/src/amqp_channel.erl"},{line,762}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,695}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,771}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,226}]}]}
