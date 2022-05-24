@@ -31,6 +31,9 @@ defmodule PetClinicWeb.PetController do
   end
 
   def create(conn, %{"pet" => pet_params}) do
+    pet_types = PetClinicService.list_pet_types()
+    owners = PetOwner.list_owners()
+    experts = PetHealthExpert.list_experts()
     case PetClinicService.create_pet(pet_params) do
       {:ok, pet} ->
         conn
@@ -38,7 +41,8 @@ defmodule PetClinicWeb.PetController do
         |> redirect(to: Routes.pet_path(conn, :show, pet))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", pet_types: pet_types, owners: owners,
+        experts: experts, changeset: changeset)
     end
   end
 
@@ -67,6 +71,9 @@ defmodule PetClinicWeb.PetController do
 
   def update(conn, %{"id" => id, "pet" => pet_params}) do
     pet = PetClinicService.get_pet!(id)
+    pet_types = PetClinicService.list_pet_types()
+    owners = PetOwner.list_owners()
+    experts = PetHealthExpert.list_experts()
 
     case PetClinicService.update_pet(pet, pet_params) do
       {:ok, pet} ->
@@ -75,7 +82,8 @@ defmodule PetClinicWeb.PetController do
         |> redirect(to: Routes.pet_path(conn, :show, pet))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", pet: pet, changeset: changeset)
+        render(conn, "edit.html", pet: pet, pet_types: pet_types, owners: owners,
+        experts: experts, changeset: changeset)
     end
   end
 

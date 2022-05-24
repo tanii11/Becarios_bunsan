@@ -7,6 +7,8 @@ defmodule PetClinic.PetHealthExpert do
   alias PetClinic.Repo
 
   alias PetClinic.PetHealthExpert.Expert
+  alias PetClinic.ExpertSpecialities
+  alias PetClinic.PetType
 
   @doc """
   Returns the list of experts.
@@ -102,5 +104,11 @@ defmodule PetClinic.PetHealthExpert do
   """
   def change_expert(%Expert{} = expert, attrs \\ %{}) do
     Expert.changeset(expert, attrs)
+  end
+
+  @spec list_specialities(any) :: list
+  def list_specialities(id) do
+    nose = Repo.all(from a in ExpertSpecialities, where: a.expert_id == ^id, select: a.pet_type_id)
+    Enum.map(nose, fn x ->  Repo.all(from p in PetType, where: p.id == ^x) end) |> List.flatten()
   end
 end

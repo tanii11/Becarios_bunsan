@@ -1,20 +1,21 @@
 defmodule PetClinicWeb.ExpertController do
   use PetClinicWeb, :controller
 
+  alias PetClinic.Repo
   alias PetClinic.PetHealthExpert
   alias PetClinic.PetHealthExpert.Expert
+  alias PetClinic.PetClinicService
 
   def index(conn, _params) do
     experts = PetHealthExpert.list_experts()
     render(conn, "index.html", experts: experts)
   end
 
-  def new(conn, _params) do
-    changeset = PetHealthExpert.change_expert(%Expert{})
-    render(conn, "new.html", changeset: changeset)
-  end
 
+
+  @spec create(Plug.Conn.t(), map) :: Plug.Conn.t()
   def create(conn, %{"expert" => expert_params}) do
+    specialities = PetClinicService.list_pet_types()
     case PetHealthExpert.create_expert(expert_params) do
       {:ok, expert} ->
         conn
@@ -22,7 +23,7 @@ defmodule PetClinicWeb.ExpertController do
         |> redirect(to: Routes.expert_path(conn, :show, expert))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, specialities: specialities)
     end
   end
 
@@ -32,12 +33,22 @@ defmodule PetClinicWeb.ExpertController do
   end
 
   def edit(conn, %{"id" => id}) do
-    expert = PetHealthExpert.get_expert!(id)
-    changeset = PetHealthExpert.change_expert(expert)
-    render(conn, "edit.html", expert: expert, changeset: changeset)
+    expert = PetHealthExpert.get_expert!(id) |> Repo.preload(:specialities)
+    specialities = Enum.map(expert.specialities, fn x -> x.id  end)
+    changeset = PetHealthExpert.change_expert(expert, %{specialities: specialities})
+    specialities = PetHealthExpert.list_specialities(id)
+    render(conn, "edit.html", expert: expert, specialities: specialities, changeset: changeset)
+  end
+
+  def new(conn, params) do
+    specialities = PetClinicService.list_pet_types()
+    changeset = PetHealthExpert.change_expert(%Expert{} |> Repo.preload(:specialities), %{})
+
+    render(conn, "new.html", changeset: changeset, specialities: specialities)
   end
 
   def update(conn, %{"id" => id, "expert" => expert_params}) do
+    specialities = PetClinicService.list_pet_types()
     expert = PetHealthExpert.get_expert!(id)
 
     case PetHealthExpert.update_expert(expert, expert_params) do
@@ -47,7 +58,7 @@ defmodule PetClinicWeb.ExpertController do
         |> redirect(to: Routes.expert_path(conn, :show, expert))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", expert: expert, changeset: changeset)
+        render(conn, "edit.html", expert: expert, changeset: changeset, specialities: specialities)
     end
   end
 

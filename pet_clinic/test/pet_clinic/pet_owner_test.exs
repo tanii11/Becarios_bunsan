@@ -2,21 +2,21 @@ defmodule PetClinic.PetOwnerTest do
   use PetClinic.DataCase
 
   alias PetClinic.PetOwner
+  alias PetClinic.PetOwner.Owner
+  import PetClinic.PetOwnerFixtures
 
   describe "owners" do
-    alias PetClinic.PetOwner.Owner
-
-    import PetClinic.PetOwnerFixtures
+    setup [:owners_fixture]
 
     @invalid_attrs %{age: nil, email: nil, name: nil, phone_num: nil}
+    test "list_owners/0 returns all owners", %{owner_0: owner, owner_1: owner_1} do
 
-    test "list_owners/0 returns all owners" do
-      owner = owner_fixture()
-      assert PetOwner.list_owners() == [owner]
+      #owner = owners_fixture()
+      assert PetOwner.list_owners() == [owner, owner_1]
     end
 
-    test "get_owner!/1 returns the owner with given id" do
-      owner = owner_fixture()
+    test "get_owner!/1 returns the owner with given id", %{owner_0: owner} do
+      #owner = owners_fixture()
       assert PetOwner.get_owner!(owner.id) == owner
     end
 
@@ -39,8 +39,8 @@ defmodule PetClinic.PetOwnerTest do
       assert {:error, %Ecto.Changeset{}} = PetOwner.create_owner(@invalid_attrs)
     end
 
-    test "update_owner/2 with valid data updates the owner" do
-      owner = owner_fixture()
+    test "update_owner/2 with valid data updates the owner", %{owner_0: owner} do
+      #owner = owners_fixture()
 
       update_attrs = %{
         age: 43,
@@ -56,20 +56,18 @@ defmodule PetClinic.PetOwnerTest do
       assert owner.phone_num == "some updated phone_num"
     end
 
-    test "update_owner/2 with invalid data returns error changeset" do
-      owner = owner_fixture()
+    test "update_owner/2 with invalid data returns error changeset", %{owner_0: owner} do
+      #owner = owners_fixture()
       assert {:error, %Ecto.Changeset{}} = PetOwner.update_owner(owner, @invalid_attrs)
       assert owner == PetOwner.get_owner!(owner.id)
     end
 
-    test "delete_owner/1 deletes the owner" do
-      owner = owner_fixture()
+    test "delete_owner/1 deletes the owner", %{owner_0: owner} do
       assert {:ok, %Owner{}} = PetOwner.delete_owner(owner)
       assert_raise Ecto.NoResultsError, fn -> PetOwner.get_owner!(owner.id) end
     end
 
-    test "change_owner/1 returns a owner changeset" do
-      owner = owner_fixture()
+    test "change_owner/1 returns a owner changeset", %{owner_0: owner} do
       assert %Ecto.Changeset{} = PetOwner.change_owner(owner)
     end
   end

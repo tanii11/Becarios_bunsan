@@ -24,6 +24,7 @@ defmodule PetClinic.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import PetClinic.DataCase
+      import PetClinic.Factory
     end
   end
 

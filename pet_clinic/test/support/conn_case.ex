@@ -23,6 +23,7 @@ defmodule PetClinicWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import PetClinicWeb.ConnCase
+      import PetClinic.Factory
 
       alias PetClinicWeb.Router.Helpers, as: Routes
 

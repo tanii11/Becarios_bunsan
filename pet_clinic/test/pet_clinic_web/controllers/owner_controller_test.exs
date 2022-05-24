@@ -12,6 +12,14 @@ defmodule PetClinicWeb.OwnerControllerTest do
   }
   @invalid_attrs %{age: nil, email: nil, name: nil, phone_num: nil}
 
+  describe "fixture" do
+    @tag :owner
+    setup [:owners_fixture]
+    test "probando expert", context do
+      IO.inspect(context)
+    end
+  end
+
   describe "index" do
     test "lists all owners", %{conn: conn} do
       conn = get(conn, Routes.owner_path(conn, :index))
@@ -27,8 +35,15 @@ defmodule PetClinicWeb.OwnerControllerTest do
   end
 
   describe "create owner" do
-    test "redirects to show when data is valid", %{conn: conn} do
-      conn = post(conn, Routes.owner_path(conn, :create), owner: @create_attrs)
+    setup [:owners_fixture]
+    test "redirects to show when data is valid", %{conn: conn} = context do
+      create_attrs = params_for(:owner,
+                                age: context.owner_0.age,
+                                email: context.owner_0.email,
+                                name: context.owner_0.name,
+                                phone_num: context.owner_0.phone_num)
+
+      conn = post(conn, Routes.owner_path(conn, :create), owner: create_attrs)
 
       assert %{id: id} = redirected_params(conn)
       assert redirected_to(conn) == Routes.owner_path(conn, :show, id)
@@ -44,35 +59,42 @@ defmodule PetClinicWeb.OwnerControllerTest do
   end
 
   describe "edit owner" do
-    setup [:create_owner]
+    @tag :edit_owner
+    setup [:owners_fixture]
 
-    test "renders form for editing chosen owner", %{conn: conn, owner: owner} do
+    test "renders form for editing chosen owner", %{conn: conn, owner_0: owner} do
       conn = get(conn, Routes.owner_path(conn, :edit, owner))
       assert html_response(conn, 200) =~ "Edit Owner"
     end
   end
 
   describe "update owner" do
-    setup [:create_owner]
+    setup [:owners_fixture]
 
-    test "redirects when data is valid", %{conn: conn, owner: owner} do
-      conn = put(conn, Routes.owner_path(conn, :update, owner), owner: @update_attrs)
+    test "redirects when data is valid", %{conn: conn, owner_0: owner} = context do
+      update_attrs = params_for(:owner,
+                                age: context.owner_1.age,
+                                email: context.owner_1.email,
+                                name: context.owner_1.name,
+                                phone_num: context.owner_1.phone_num)
+
+      conn = put(conn, Routes.owner_path(conn, :update, owner), owner: update_attrs)
       assert redirected_to(conn) == Routes.owner_path(conn, :show, owner)
 
       conn = get(conn, Routes.owner_path(conn, :show, owner))
-      assert html_response(conn, 200) =~ "some updated email"
+      assert html_response(conn, 200) =~ "My title"
     end
 
-    test "renders errors when data is invalid", %{conn: conn, owner: owner} do
+    test "renders errors when data is invalid", %{conn: conn, owner_0: owner} do
       conn = put(conn, Routes.owner_path(conn, :update, owner), owner: @invalid_attrs)
       assert html_response(conn, 200) =~ "Edit Owner"
     end
   end
 
   describe "delete owner" do
-    setup [:create_owner]
+    setup [:owners_fixture]
 
-    test "deletes chosen owner", %{conn: conn, owner: owner} do
+    test "deletes chosen owner", %{conn: conn, owner_0: owner} do
       conn = delete(conn, Routes.owner_path(conn, :delete, owner))
       assert redirected_to(conn) == Routes.owner_path(conn, :index)
 
@@ -83,7 +105,7 @@ defmodule PetClinicWeb.OwnerControllerTest do
   end
 
   defp create_owner(_) do
-    owner = owner_fixture()
+    owner = owners_fixture()
     %{owner: owner}
   end
 end

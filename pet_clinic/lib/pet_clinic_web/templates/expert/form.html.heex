@@ -18,7 +18,7 @@
   <%= error_tag f, :email %>
 
   <%= label f, :specialities %>
-  <%= text_input f, :specialities %>
+  <%= multiple_select f, :specialities, Enum.map(@specialities, &({&1.name, &1.id})) %>
   <%= error_tag f, :specialities %>
 
   <%= label f, :sex %>

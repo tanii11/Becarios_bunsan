@@ -111,6 +111,7 @@ defmodule PetClinic.PetClinicService do
   end
 
   def list_pet_types() do
-    Repo.all(PetType)
+    PetType
+    |> Repo.all()
   end
 end
