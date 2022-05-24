@@ -3,6 +3,10 @@ image: 'bunsan/ubuntu-elixir:1.12.2-otp24-node16'
 services:
   - postgres:9.6
 
+variables:
+  POSTGRES_PASSWORD: postgres
+  
+
 before_script:
   - mix local.hex --force
   - mix deps.clean --all
