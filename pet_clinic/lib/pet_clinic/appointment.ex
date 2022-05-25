@@ -15,9 +15,17 @@ defmodule PetClinic.Appointment do
   end
 
   @doc false
+  # def changeset(appointment, attrs) do
+  #   appointment
+  #   |> cast(attrs, [:pet_id, :expert_id])
+  #   |> validate_required([:pet_id, :expert_id])
+  # end
   def changeset(appointment, attrs) do
     appointment
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:pet_id, :expert_id, :datetime])
+    |> validate_required([:pet_id, :expert_id, :datetime])
+    |> unique_constraint([:pet_id, :expert_id, :datetime])
+    |> foreign_key_constraint(:pet_id)
+    |> foreign_key_constraint(:expert_id)
   end
 end

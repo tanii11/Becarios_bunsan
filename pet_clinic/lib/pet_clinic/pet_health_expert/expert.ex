@@ -13,7 +13,10 @@ defmodule PetClinic.PetHealthExpert.Expert do
     field :sex, Ecto.Enum, values: [:male, :female]
 
     has_many :pets, PetClinic.PetClinicService.Pet
-    many_to_many :specialities, PetClinic.PetType, join_through: PetClinic.ExpertSpecialities, on_replace: :delete
+
+    many_to_many :specialities, PetClinic.PetType,
+      join_through: PetClinic.ExpertSpecialities,
+      on_replace: :delete
 
     has_many :appoiments, PetClinic.Appointment
     has_one :expert_schedules, PetClinic.AppointmentService.ExpertSchedule
@@ -34,7 +37,6 @@ defmodule PetClinic.PetHealthExpert.Expert do
     expert
     |> cast(attrs, [:name, :age, :email, :sex])
     |> validate_required([:name, :age, :email, :sex])
-
   end
 
   defp enum_association(ids, module) do

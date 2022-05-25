@@ -10,13 +10,10 @@ defmodule PetClinic.PetOwnerTest do
 
     @invalid_attrs %{age: nil, email: nil, name: nil, phone_num: nil}
     test "list_owners/0 returns all owners", %{owner_0: owner, owner_1: owner_1} do
-
-      #owner = owners_fixture()
       assert PetOwner.list_owners() == [owner, owner_1]
     end
 
     test "get_owner!/1 returns the owner with given id", %{owner_0: owner} do
-      #owner = owners_fixture()
       assert PetOwner.get_owner!(owner.id) == owner
     end
 
@@ -40,8 +37,6 @@ defmodule PetClinic.PetOwnerTest do
     end
 
     test "update_owner/2 with valid data updates the owner", %{owner_0: owner} do
-      #owner = owners_fixture()
-
       update_attrs = %{
         age: 43,
         email: "some updated email",
@@ -57,7 +52,6 @@ defmodule PetClinic.PetOwnerTest do
     end
 
     test "update_owner/2 with invalid data returns error changeset", %{owner_0: owner} do
-      #owner = owners_fixture()
       assert {:error, %Ecto.Changeset{}} = PetOwner.update_owner(owner, @invalid_attrs)
       assert owner == PetOwner.get_owner!(owner.id)
     end

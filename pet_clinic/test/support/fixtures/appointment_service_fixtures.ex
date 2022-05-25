@@ -37,6 +37,7 @@ defmodule PetClinic.AppointmentServiceFixtures do
 
   def expert_schedules_fixture(attrs \\ %{}) do
     expert = attrs.expert_0
+
     %{
       expert_schedule_0:
         insert(:expert_schedule,

@@ -7,6 +7,7 @@ defmodule PetClinic.PetHealthExpertFixtures do
   @doc """
   Generate a expert.
   """
+
   # def expert_fixture(attrs \\ %{}) do
   #   {:ok, expert} =
   #     attrs
@@ -24,9 +25,7 @@ defmodule PetClinic.PetHealthExpertFixtures do
 
   import PetClinic.Factory
 
-
   def experts_fixture(attrs \\ %{}) do
-
     %{
       expert_0:
         insert(:expert,
@@ -36,12 +35,12 @@ defmodule PetClinic.PetHealthExpertFixtures do
           sex: "female"
         ),
       expert_1:
-      insert(:expert,
-        age: 43,
-        email: "some update email",
-        name: "some update name",
-        sex: "female"
-      )
+        insert(:expert,
+          age: 43,
+          email: "some update email",
+          name: "some update name",
+          sex: "female"
+        )
     }
   end
 end

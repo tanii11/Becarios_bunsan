@@ -32,14 +32,46 @@ defmodule PetClinic.AppointmentService.ExpertSchedule do
   @doc false
   def changeset(expert_schedule, attrs) do
     expert_schedule
-    |> cast(attrs, [:monday_start, :monday_end, :tuesday_start, :tuesday_end, :wednesday_start, :wednesday_end,
-    :thursday_start, :thursday_end, :friday_start, :friday_end, :saturday_start, :saturday_end, :sunday_start,
-    :sunday_end, :week_start, :week_end, :expert_id])
+    |> cast(attrs, [
+      :monday_start,
+      :monday_end,
+      :tuesday_start,
+      :tuesday_end,
+      :wednesday_start,
+      :wednesday_end,
+      :thursday_start,
+      :thursday_end,
+      :friday_start,
+      :friday_end,
+      :saturday_start,
+      :saturday_end,
+      :sunday_start,
+      :sunday_end,
+      :week_start,
+      :week_end,
+      :expert_id
+    ])
+    |> validate_required([
+      :monday_start,
+      :monday_end,
+      :tuesday_start,
+      :tuesday_end,
+      :wednesday_start,
+      :wednesday_end,
+      :thursday_start,
+      :thursday_end,
+      :friday_start,
+      :friday_end,
+      :saturday_start,
+      :saturday_end,
+      :sunday_start,
+      :sunday_end,
+      :week_start,
+      :week_end,
+      :expert_id
+    ])
 
-    |> validate_required([:monday_start, :monday_end, :tuesday_start, :tuesday_end, :wednesday_start, :wednesday_end,
-    :thursday_start, :thursday_end, :friday_start, :friday_end, :saturday_start, :saturday_end, :sunday_start,
-    :sunday_end, :week_start, :week_end, :expert_id])
-
-
+    # |> unique_constraint([:expert_id])
+    # |> foreign_key_constraint(:expert_id)
   end
 end

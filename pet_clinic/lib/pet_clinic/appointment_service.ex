@@ -41,42 +41,67 @@ defmodule PetClinic.AppointmentService do
     end)
   end
 
-  @spec new_appointment(any, any, NaiveDateTime.t()) :: any
   def new_appointment(expert_id, pet_id, datetime) do
     new_datetime = DateTime.from_naive!(datetime, "Etc/UTC")
-    # validar el expert_id
-    if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
-      {:error, "expert with id = #{expert_id} doesn´t exist"}
+
+    # validar que la cita no sea en el pasado
+    if new_datetime < DateTime.utc_now() do
+      {:error, "datetime is in the past"}
     else
-      # validar el pet_id
-      if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
-        {:error, "pet with id = #{pet_id} doesn´t exist"}
-      else
-        # validar que la cita no sea en el pasado
-        if new_datetime < DateTime.utc_now() do
-          {:error, "datetime is in the past"}
-        else
-          time = DateTime.to_time(new_datetime)
-          date = DateTime.to_date(new_datetime)
-          options = available_slots(expert_id, date, date)
+      time = DateTime.to_time(new_datetime)
+      date = DateTime.to_date(new_datetime)
+      options = available_slots(expert_id, date, date)
+      # validar que no se repita el horario
+      # if Map.get(options, date) |> Enum.filter(fn opt -> Time.compare(opt, time) == :eq end) == [] do
+      #   {:error, "This schedule is already busy or unavailable time slot"}
+      # else
+      Appointment.changeset(%Appointment{}, %{
+        expert_id: expert_id,
+        pet_id: pet_id,
+        datetime: datetime
+      })
+      |> Repo.insert()
 
-          # validar que no se repita el horario
-          if Map.get(options, date) |> Enum.filter(fn opt -> Time.compare(opt, time) == :eq end) ==
-               [] do
-            {:error, "This schedule is already busy or unavailable time slot"}
-          else
-            appointment = %Appointment{
-              expert_id: expert_id,
-              pet_id: pet_id,
-              datetime: DateTime.from_naive!(datetime, "Etc/UTC")
-            }
-
-            Repo.insert(appointment)
-          end
-        end
-      end
+      # end
     end
   end
+
+  # @spec new_appointment(any, any, NaiveDateTime.t()) :: any
+  # def new_appointment(expert_id, pet_id, datetime) do
+  #   new_datetime = DateTime.from_naive!(datetime, "Etc/UTC")
+  #   # validar el expert_id
+  #   if Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id) == nil do
+  #     {:error, "expert with id = #{expert_id} doesn´t exist"}
+  #   else
+  #     # validar el pet_id
+  #     if Repo.one(from p in Pet, where: p.id == ^pet_id) == nil do
+  #       {:error, "pet with id = #{pet_id} doesn´t exist"}
+  #     else
+  #       # validar que la cita no sea en el pasado
+  #       if new_datetime < DateTime.utc_now() do
+  #         {:error, "datetime is in the past"}
+  #       else
+  #         time = DateTime.to_time(new_datetime)
+  #         date = DateTime.to_date(new_datetime)
+  #         options = available_slots(expert_id, date, date)
+
+  #         # validar que no se repita el horario
+  #         if Map.get(options, date) |> Enum.filter(fn opt -> Time.compare(opt, time) == :eq end) ==
+  #              [] do
+  #           {:error, "This schedule is already busy or unavailable time slot"}
+  #         else
+  #           appointment = %Appointment{
+  #             expert_id: expert_id,
+  #             pet_id: pet_id,
+  #             datetime: DateTime.from_naive!(datetime, "Etc/UTC")
+  #           }
+
+  #           Repo.insert(appointment)
+  #         end
+  #       end
+  #     end
+  #   end
+  # end
 
   def available_slots(expert_id, from_date, to_date) do
     schedule = Repo.one(from e in ExpertSchedule, where: e.expert_id == ^expert_id)

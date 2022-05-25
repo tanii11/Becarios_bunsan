@@ -1,4 +1,7 @@
 defmodule PetClinic.Factory do
+  @moduledoc """
+    factory manager of the different fixtures
+  """
   use ExMachina.Ecto, repo: PetClinic.Repo
 
   def pet_factory do
@@ -17,7 +20,6 @@ defmodule PetClinic.Factory do
       sex: "female"
     }
   end
-
 
   def owner_factory do
     %PetClinic.PetOwner.Owner{
@@ -52,6 +54,12 @@ defmodule PetClinic.Factory do
       sunday_end: "20:00:00",
       week_start: "2022-05-23",
       week_end: "2022-05-29"
+    }
+  end
+
+  def appointment_factory do
+    %PetClinic.Appointment{
+      datetime: ~U[2022-04-27 14:30:00Z]
     }
   end
 end

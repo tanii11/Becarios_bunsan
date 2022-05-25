@@ -7,6 +7,7 @@ defmodule PetClinic.PetOwnerFixtures do
   @doc """
   Generate a owner.
   """
+
   # def owner_fixture(attrs \\ %{}) do
   #   {:ok, owner} =
   #     attrs
@@ -24,7 +25,6 @@ defmodule PetClinic.PetOwnerFixtures do
   import PetClinic.Factory
 
   def owners_fixture(attrs \\ %{}) do
-
     %{
       owner_0:
         insert(:owner,
@@ -35,10 +35,10 @@ defmodule PetClinic.PetOwnerFixtures do
         ),
       owner_1:
         insert(:owner,
-        age: 43,
-        email: "some update email",
-        name: "some update name",
-        phone_num: "some update phone_num"
+          age: 43,
+          email: "some update email",
+          name: "some update name",
+          phone_num: "some update phone_num"
         )
     }
   end

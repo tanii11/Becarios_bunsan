@@ -7,6 +7,7 @@ defmodule PetClinic.PetClinicServiceFixtures do
   @doc """
   Generate a pet.
   """
+
   # def pet_fixture(attrs \\ %{}) do
   #   owner = PetClinic.PetOwnerFixtures.owner_fixture()
   #   expert = PetClinic.PetHealthExpertFixtures.expert_fixture()
@@ -27,11 +28,11 @@ defmodule PetClinic.PetClinicServiceFixtures do
 
   import PetClinic.Factory
 
-
   def pets_fixture(attrs \\ %{}) do
     owner = attrs.owner_0
     expert = attrs.expert_0
     pet_type = attrs.pet_type_0
+
     %{
       pet_0:
         insert(:pet,
@@ -43,14 +44,14 @@ defmodule PetClinic.PetClinicServiceFixtures do
           expert_id: expert.id
         ),
       pet_1:
-      insert(:pet,
-        age: 43,
-        name: "some update name",
-        sex: "female",
-        type_id: pet_type.id,
-        owner_id: owner.id,
-        expert_id: expert.id
-      )
+        insert(:pet,
+          age: 43,
+          name: "some update name",
+          sex: "female",
+          type_id: pet_type.id,
+          owner_id: owner.id,
+          expert_id: expert.id
+        )
     }
   end
 end

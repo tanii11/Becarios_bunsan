@@ -8,20 +8,18 @@ defmodule PetClinic.PetTypeFixtures do
   Generate a pet.
   """
 
-
   import PetClinic.Factory
-
 
   def pet_types_fixture(attrs \\ %{}) do
     %{
       pet_type_0:
         insert(:pet_type,
-          name: "some name",
+          name: "some name"
         ),
       pet_type_1:
-      insert(:pet_type,
-        name: "some update name",
-      )
+        insert(:pet_type,
+          name: "some update name"
+        )
     }
   end
 end

@@ -11,11 +11,10 @@ defmodule PetClinicWeb.ExpertController do
     render(conn, "index.html", experts: experts)
   end
 
-
-
   @spec create(Plug.Conn.t(), map) :: Plug.Conn.t()
   def create(conn, %{"expert" => expert_params}) do
     specialities = PetClinicService.list_pet_types()
+
     case PetHealthExpert.create_expert(expert_params) do
       {:ok, expert} ->
         conn
@@ -34,7 +33,7 @@ defmodule PetClinicWeb.ExpertController do
 
   def edit(conn, %{"id" => id}) do
     expert = PetHealthExpert.get_expert!(id) |> Repo.preload(:specialities)
-    specialities = Enum.map(expert.specialities, fn x -> x.id  end)
+    specialities = Enum.map(expert.specialities, fn x -> x.id end)
     changeset = PetHealthExpert.change_expert(expert, %{specialities: specialities})
     specialities = PetHealthExpert.list_specialities(id)
     render(conn, "edit.html", expert: expert, specialities: specialities, changeset: changeset)
